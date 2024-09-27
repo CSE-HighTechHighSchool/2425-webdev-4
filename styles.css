@@ -56,6 +56,11 @@
     background-color: #358856; /*#0096c7*/
 }
 
+.icon {
+    width: 5rem;
+    height: auto;
+}
+
 /* ----------------- ID CSS ----------------- */
 
 /* -----------------Underline Animation CSS -----------------*/
