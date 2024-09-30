@@ -1,0 +1,18 @@
+.index {
+    color: white;
+}
+
+.index {
+    color: white;  
+    height: 100rem
+}
+
+html, body { 
+    margin:0; 
+    padding:0; 
+    height:100%; 
+    background-size: cover; /* Makes the image cover the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  
