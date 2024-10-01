@@ -5,7 +5,7 @@
 body,
 html {
 	height: 100%;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 * {
@@ -13,16 +13,14 @@ html {
 }
 
 .bg-image {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Places the background behind everything */
-    background-size: cover;
-    background-position: center;
-
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1; /* Places the background behind everything */
+	background-size: cover;
+	background-position: center;
 
 	/* Add the blur effect */
 	filter: blur(16px);
@@ -35,6 +33,19 @@ html {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.cutout-text {
+	background-color: white;
+	color: black;
+	font-size: 10vw; /* Responsive font size */
+	font-weight: bold;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+
+	border-radius: 0.5em;
+
+	mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
 /* Position text in the middle of the page/image */
@@ -53,7 +64,6 @@ html {
 	padding: 20px;
 	text-align: center;
 }
-
 
 .icon {
 	width: 1.5em;
