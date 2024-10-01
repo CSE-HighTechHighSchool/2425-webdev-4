@@ -48,6 +48,14 @@ html {
 	mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
+.black {
+	color: black;
+}
+
+.white {
+	color: white;
+}
+
 /* Position text in the middle of the page/image */
 .bg-text {
 	background-color: rgb(0, 0, 0); /* Fallback color */
