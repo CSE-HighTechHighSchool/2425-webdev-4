@@ -63,6 +63,13 @@ html {
     width: 100%; /* Span the full width */
 }
 
+.author-icon img {
+	width: 175px;
+	height: 175px;
+	border-radius: 50%;
+	object-fit: cover;
+	overflow: hidden;
+  }
 
 
 
