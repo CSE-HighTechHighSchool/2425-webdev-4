@@ -4,7 +4,8 @@
         <title>Tornado Slideshow</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         <!-- Bootstrap CSS v5.2.1 -->
         <link
@@ -55,7 +56,8 @@
             <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">
-                        <img src="img/tornado-solid.svg" alt="Tornado Icon" class="icon" />
+                        <img src="img/tornado-solid.svg" alt="Tornado Icon"
+                            class="icon" />
                     </a>
                     <button
                         class="navbar-toggler"
@@ -71,7 +73,8 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link active" href="#">Home
-                                    <span class="visually-hidden">(current)</span>
+                                    <span
+                                        class="visually-hidden">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
@@ -83,18 +86,23 @@
                                     aria-haspopup="true"
                                     aria-expanded="false">Natural Disasters</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="tornados.html">Tornados</a>
-                                    <a class="dropdown-item" href="hurricanes.html">Hurricanes</a>
-                                    <a class="dropdown-item" href="tornados.html">Earthquakes</a>
+                                    <a class="dropdown-item"
+                                        href="tornados.html">Tornados</a>
+                                    <a class="dropdown-item"
+                                        href="hurricanes.html">Hurricanes</a>
+                                    <a class="dropdown-item"
+                                        href="tornados.html">Earthquakes</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">References</a>
+                                    <a class="dropdown-item"
+                                        href="#">References</a>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="authors.html">Authors</a>
+                                <a class="nav-link"
+                                    href="authors.html">Authors</a>
                             </li>
                         </ul>
                     </div>
@@ -103,51 +111,102 @@
         </header>
 
         <main>
-            <div id="tornadoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="tornadoCarousel" class="carousel slide"
+                data-interval="false">
                 <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-image: url('img/hurricane-on-beach.webp');">
-                        <div class="container d-flex align-items-center" style="height: 100vh">
-                            <div class="row w-100">
-                                <div class="col-md-6">
-                                    <h1 class="display-1 black" style="font-weight: bold">Hurricanes</h1>
-                                    <!-- Slide content here -->
+                    <div class="carousel-item active"
+                        style="background-image: url('img/hurricane-space-view.webp');">
+                        <div class="container d-flex align-items-center"
+                            style="height: 100vh">
+                            <div class="col-md-6">
+                                <div class="rounded-div"
+                                    style="background-color: white; padding: 20px; border-radius: 15px; margin-bottom: 10px; width:50rem">
+                                    <h1 class="display-1"
+                                        style="font-weight: bold; color: black;">About
+                                        Hurricanes</h1>
+
+                                    <p class="lead" style="color: black;">
+                                        <strong>Definition</strong>: Hurricanes
+                                        are powerful tropical storms with strong
+                                        winds (74 mph or higher), heavy rains,
+                                        and storm surges.
+                                    </p>
+                                    <p class="lead" style="color: black;">
+                                        <strong>Formation</strong>: They form
+                                        over warm ocean waters in tropical
+                                        regions, gaining energy as they travel.
+                                    </p>
+                                    <p class="lead" style="color: black;">
+                                        <strong>Hurricanes</strong>:
+                                        Hurricanes are categorized by wind speed
+                                        using the Saffir-Simpson scale (Category
+                                        1-5).
+                                    </p>
                                 </div>
+                                <button class="btn btn-primary btn-lg"
+                                    id="learnMoreBtn" role="button">Learn
+                                    more</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-image: url('img/hurricane-space-view.webp');">
-                        <div class="container d-flex align-items-center" style="height: 100vh">
-                            <div class="row w-100">
-                                <div class="col-md-6">
-                                    <h1 class="display-1 black" style="font-weight: bold">Hurricanes</h1>
-                                    <p class="lead black">
-                                        This is a simple hero unit, a simple jumbotron-style component for
-                                        calling extra attention to featured content or information.
+                    <div class="carousel-item"
+                        style="background-image: url('img/hurricane-on-beach.webp');">
+                        <div class="container d-flex align-items-center"
+                            style="height: 100vh">
+                            <div class="col-md-6">
+                                <div class="rounded-div"
+                                    style="background-color: white; padding: 20px; border-radius: 15px; margin-bottom: 10px; width:50rem">
+                                    <h1 class="display-1"
+                                        style="font-weight: bold; color: black;">Survival
+                                        Tips</h1>
+
+                                    <p class="lead" style="color: black;">
+                                        <strong>Before the storm</strong>:
+                                        Create an emergency kit (food, water,
+                                        medicines).
+                                        Know your evacuation routes.
+                                        Secure your home (shutters, bring in
+                                        outdoor items).
                                     </p>
-                                    <p>
-                                        It uses utility classes for typography and spacing to space
-                                        content out within the larger container.
+                                    <p class="lead" style="color: black;">
+                                        <strong>During the storm</strong>:
+                                        Stay indoors, away from windows.
+                                        Follow evacuation orders if issued.
+                                        Use radio/alerts for updates.
                                     </p>
-                                    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                                    <p class="lead" style="color: black;">
+                                        <strong>After the storm</strong>:
+                                        Avoid floodwaters and damaged areas.
+                                        Check for power lines or structural
+                                        damage.
+                                    </p>
                                 </div>
+                                <button class="btn btn-primary btn-lg"
+                                    id="goBackBtn" role="button">Go
+                                    Back</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#tornadoCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#tornadoCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
+
+            <script>
+                document.getElementById('learnMoreBtn').addEventListener('click', function () {
+                    var carousel = new bootstrap.Carousel(document.querySelector('#tornadoCarousel'));
+                    carousel.next(); // Move to the next slide
+                });
+            </script>
+            <script>
+                document.getElementById('goBackBtn').addEventListener('click', function () {
+                    var carousel = new bootstrap.Carousel(document.querySelector('#tornadoCarousel'));
+                    carousel.prev(); // Move to the next slide
+                });
+            </script>
+
         </main>
 
         <footer

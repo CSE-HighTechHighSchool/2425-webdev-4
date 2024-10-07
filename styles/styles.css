@@ -48,6 +48,19 @@ html {
 	mix-blend-mode: screen; /* This makes the cutout text possible */
 }
 
+.cutout-text-2 {
+    font-weight: bold;
+    font-size: 5rem;
+    background-color: transparent; /* No background color */
+    color: white; /* Text color (can change depending on blend mode) */
+    mix-blend-mode: difference; /* Create contrast with the background */
+    text-align: center; /* Center the text */
+    width: 100%; /* Span the full width */
+}
+
+
+
+
 .black {
 	color: black;
 }
