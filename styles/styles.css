@@ -8,6 +8,11 @@ html {
 	overflow: hidden;
 }
 
+.scrolling {
+	overflow-y: scroll;
+}
+
+
 * {
 	box-sizing: border-box;
 }
