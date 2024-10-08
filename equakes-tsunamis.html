@@ -48,11 +48,11 @@
       }
 
       .carousel-item.active::before {
-        background-image: url("img/tornado_1.jpg"); /* Set the background for the active slide */
+        background-image: url("img/hurricane-space-view.webp"); /* Set the background for the active slide */
       }
 
       .carousel-item:nth-child(2)::before {
-        background-image: url("img/tornado_2.jpg"); /* Set the background for the second slide */
+        background-image: url("img/hurricane-on-beach.webp"); /* Set the background for the second slide */
       }
 
       .carousel-control-prev,
@@ -126,8 +126,8 @@
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="tornados.html">Tornados</a>
                   <a class="dropdown-item" href="hurricanes.html">Hurricanes</a>
-                  <a class="dropdown-item" href="earthquakes.html"
-                    >Earthquakes</a
+                  <a class="dropdown-item" href="equakes-tsunamis.html"
+                    >Tsunamis</a
                   >
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="references.html">References</a>
@@ -156,31 +156,39 @@
               <div class="col-md-6">
                 <div class="rounded-div">
                   <h1 class="display-1" style="font-weight: bold; color: black">
-                    About Tornados
+                    Earthquakes
                   </h1>
 
                   <p class="lead" style="color: black">
-                    <strong>Definition</strong>: Tornados are violently rotating
-                    columns of air that form at the base of a thunderstorm and
-                    go to the ground. They are visible only if a condensation
-                    funnel is formed. These are made up of water droplets, dust,
-                    and debris.
+                    <strong>Definition</strong>: A tsunami is a series of large
+                    ocean waves caused by the sudden displacement of water from
+                    events like earthquakes, volcanic eruptions, or landslides.
                   </p>
+
                   <p class="lead" style="color: black">
-                    <strong>Formation</strong>: Atmospheric instability leads to
-                    the formation of tornados. Warm, moist air near the ground
-                    can be combined with cooler dry air and wind shear. This
-                    along with with a change in wind speed and/or direction with
-                    height can promote rotation and form a tornado.
+                    <strong>Common Causes</strong>:
                   </p>
-                  <p class="lead" style="color: black">
-                    <strong>Tornados</strong>: Tornados are categorized by wind
-                    speed using the Fujita Tornado Damage Scale (Category
-                    F0-F5).
-                  </p>
+                  <ol style="color: black">
+                    <li>
+                      Earthquakes: Most common, from the ocean floor rising or
+                      sinking due to tectonic movement.
+                    </li>
+                    <li>
+                      Landslides: Can trigger tsunamis with large amounts of
+                      debris.
+                    </li>
+                    <li>Volcanic activity: Eruptions can cause tsunamis.</li>
+                    <li>
+                      Weather: Some weather conditions may trigger tsunamis.
+                    </li>
+                    <li>
+                      Near-Earth objects: Asteroids or comets hitting the ocean
+                      can cause tsunamis.
+                    </li>
+                  </ol>
                 </div>
                 <button
-                  class="btn btn-primary btn-lg"
+                  class="btn btn-primary btn-lg mt-2"
                   id="learnMoreBtn"
                   role="button"
                 >
@@ -202,23 +210,16 @@
                   </h1>
 
                   <p class="lead" style="color: black">
-                    <strong>Before the storm</strong>: Create an emergency kit
-                    (food, water, medicines). Know your evacuation routes or
-                    have safe spaces in your house. Secure your home (shutters,
-                    bring in outdoor items). Be prepared for emergencies, and
-                    make sure everyone knows how to deal with them.
+                    <strong>Higher Ground</strong>: You should quickly evacuate
+                    to higher elevation or inland, away from the coast.
                   </p>
                   <p class="lead" style="color: black">
-                    <strong>During the storm</strong>: Stay indoors, away from
-                    windows. Go to the lowest and most study room in your house.
-                    Follow evacuation orders if issued. Use radio/alerts for
-                    updates.
+                    <strong>Staying Informed</strong>: Monitor alerts and
+                    warnings via radio, phone apps, or local authorities.
                   </p>
                   <p class="lead" style="color: black">
-                    <strong>After the storm</strong>: Save your phone battery
-                    for emergecnies. Avoid damaged areas. Check for power lines
-                    or structural damage. Wear appropriate clothes when cleaning
-                    up.
+                    <strong>Avoiding Water</strong>: Do not return to the beach
+                    or enter the water until authorities declare it safe.
                   </p>
                 </div>
                 <button
@@ -234,14 +235,6 @@
         </div>
 
         <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#tornadoCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#tornadoCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
       </div>
 
       <script>
