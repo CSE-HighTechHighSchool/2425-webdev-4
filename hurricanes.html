@@ -27,6 +27,29 @@
                 height: 100vh;
                 background-size: cover;
                 background-position: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .carousel-item::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                filter: blur(10px); /* Adjust the blur intensity here */
+                z-index: -1;
+            }
+
+            .carousel-item.active::before {
+                background-image: url('img/hurricane-space-view.webp'); /* Set the background for the active slide */
+            }
+
+            .carousel-item:nth-child(2)::before {
+                background-image: url('img/hurricane-on-beach.webp'); /* Set the background for the second slide */
             }
 
             .carousel-control-prev,
@@ -47,6 +70,16 @@
             .carousel-caption {
                 background: rgba(0, 0, 0, 0.5);
                 padding: 20px;
+            }
+
+            .rounded-div {
+                background-color: white;
+                padding: 20px;
+                border-radius: 15px;
+                margin-bottom: 10px;
+                width: 50rem;
+                z-index: 1;
+                position: relative;
             }
         </style>
     </head>
@@ -114,13 +147,11 @@
             <div id="tornadoCarousel" class="carousel slide"
                 data-interval="false">
                 <div class="carousel-inner">
-                    <div class="carousel-item active"
-                        style="background-image: url('img/hurricane-space-view.webp');">
+                    <div class="carousel-item active">
                         <div class="container d-flex align-items-center"
                             style="height: 100vh">
                             <div class="col-md-6">
-                                <div class="rounded-div"
-                                    style="background-color: white; padding: 20px; border-radius: 15px; margin-bottom: 10px; width:50rem">
+                                <div class="rounded-div">
                                     <h1 class="display-1"
                                         style="font-weight: bold; color: black;">About
                                         Hurricanes</h1>
@@ -150,13 +181,11 @@
                         </div>
                     </div>
 
-                    <div class="carousel-item"
-                        style="background-image: url('img/hurricane-on-beach.webp');">
+                    <div class="carousel-item">
                         <div class="container d-flex align-items-center"
                             style="height: 100vh">
                             <div class="col-md-6">
-                                <div class="rounded-div"
-                                    style="background-color: white; padding: 20px; border-radius: 15px; margin-bottom: 10px; width:50rem">
+                                <div class="rounded-div">
                                     <h1 class="display-1"
                                         style="font-weight: bold; color: black;">Survival
                                         Tips</h1>
@@ -203,7 +232,7 @@
             <script>
                 document.getElementById('goBackBtn').addEventListener('click', function () {
                     var carousel = new bootstrap.Carousel(document.querySelector('#tornadoCarousel'));
-                    carousel.prev(); // Move to the next slide
+                    carousel.prev(); // Move to the previous slide
                 });
             </script>
 
