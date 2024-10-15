@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tornado Slideshow</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <style>
+      .carousel-inner {
+        height: 100vh;
+      }
+
+      .carousel-item {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px); /* Adjust the blur intensity here */
+        z-index: -1;
+      }
+
+      .carousel-item.active::before {
+        background-image: url("img/wildfire-1.png"); /* Set the background for the active slide */
+      }
+
+      .carousel-item:nth-child(2)::before {
+        background-image: url("img/wildfire-1.png"); /* Set the background for the second slide */
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5%;
+      }
+
+      .carousel-control-prev {
+        left: 10px;
+      }
+
+      .carousel-control-next {
+        right: 10px;
+      }
+
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+      }
+
+      .rounded-div {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        width: 50rem;
+        z-index: 1;
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/tornado-solid.svg" alt="Tornado Icon" class="icon" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="index.html"
+                  >Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle hover-underline-animation"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Natural Disasters</a
+                >
+                <div class="dropdown-menu">
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="tornados.html"
+                    >Tornados</a
+                  >
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="hurricanes.html"
+                    >Hurricanes</a
+                  >
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="equakes-tsunamis.html"
+                    >Earthquakes/Tsunamis</a
+                  >
+                  <a
+                    class="dropdown-item active hover-underline-animation"
+                    href="wildfires.html"
+                    >Wildfires</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="references.html"
+                    >References</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link hover-underline-animation"
+                  href="authors.html"
+                  >Authors</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="tornadoCarousel" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="container d-flex align-items-center"
+              style="height: 100vh"
+            >
+              <div class="col-md-6">
+                <div class="rounded-div">
+                  <h1 class="display-1" style="font-weight: bold; color: black">
+                    About Volcanos
+                  </h1>
+
+                  <p class="lead" style="color: black">
+                    <strong>Definition</strong>: lava
+                  </p>
+                  <p class="lead" style="color: black">
+                    <strong>Formation</strong>: lowk like tectonic plates or
+                    smth
+                  </p>
+                  <p class="lead" style="color: black">
+                    <strong>Tornados</strong>: they go boom
+                  </p>
+                </div>
+                <button
+                  class="btn btn-primary btn-lg"
+                  id="learnMoreBtn"
+                  role="button"
+                >
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div
+              class="container d-flex align-items-center"
+              style="height: 100vh"
+            >
+              <div class="col-md-6">
+                <div class="rounded-div">
+                  <h1 class="display-1" style="font-weight: bold; color: black">
+                    Survival Tips
+                  </h1>
+
+                  <p class="lead" style="color: black">
+                    <strong>Before the storm</strong>: Create an emergency kit
+                    (food, water, medicines). Know your evacuation routes or
+                    have safe spaces in your house. Secure your home (shutters,
+                    bring in outdoor items). Be prepared for emergencies, and
+                    make sure everyone knows how to deal with them.
+                  </p>
+                  <p class="lead" style="color: black">
+                    <strong>During the storm</strong>: Stay indoors, away from
+                    windows. Go to the lowest and most study room in your house.
+                    Follow evacuation orders if issued. Use radio/alerts for
+                    updates.
+                  </p>
+                  <p class="lead" style="color: black">
+                    <strong>After the storm</strong>: Save your phone battery
+                    for emergecnies. Avoid damaged areas. Check for power lines
+                    or structural damage. Wear appropriate clothes when cleaning
+                    up.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-primary btn-lg"
+                  id="goBackBtn"
+                  role="button"
+                >
+                  Go Back
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#tornadoCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#tornadoCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <script>
+        document
+          .getElementById("learnMoreBtn")
+          .addEventListener("click", function () {
+            var carousel = new bootstrap.Carousel(
+              document.querySelector("#tornadoCarousel")
+            );
+            carousel.next(); // Move to the next slide
+          });
+      </script>
+      <script>
+        document
+          .getElementById("goBackBtn")
+          .addEventListener("click", function () {
+            var carousel = new bootstrap.Carousel(
+              document.querySelector("#tornadoCarousel")
+            );
+            carousel.prev(); // Move to the previous slide
+          });
+      </script>
+    </main>
+
+    <footer
+      style="
+        margin: 0rem 2rem 0rem 0rem;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+      "
+    >
+      <p>Template footer</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
