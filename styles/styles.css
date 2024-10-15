@@ -272,33 +272,35 @@ html {
 		border-radius: 1.625rem;
   
 		.icon {
-		  @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-		  position: absolute;
-		  top: 0;
-		  bottom: 0;
-		  margin: auto;
-		  background: white;
-  
-		  &.arrow {
 			@include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-			left: 0.625rem;
-			width: 1.125rem;
-			height: 0.125rem;
-			background: none;
-  
-			&::before {
-			  position: absolute;
-			  content: '';
-			  top: -0.25rem;
-			  right: 0.0625rem;
-			  width: 0.625rem;
-			  height: 0.625rem;
-			  border-top: 0.125rem solid #fff;
-			  border-right: 0.125rem solid #fff;
-			  transform: rotate(45deg);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			background: white;
+		  
+			&.arrow {
+			  @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+			  left: 0.625rem; /* Move arrow to the left side */
+			  width: 1.125rem;
+			  height: 0.125rem;
+			  background: none;
+		  
+			  &::before {
+				position: absolute;
+				content: '';
+				top: -0.25rem;
+				right: 0.0625rem; /* Adjust position */
+				width: 0.625rem;
+				height: 0.625rem;
+				border-top: 0.125rem solid #fff;
+				border-left: 0.125rem solid #fff; /* Keep left border for left arrow */
+				transform: rotate(-135deg); /* Rotate to point left */
+			  }
 			}
 		  }
-		}
+		  
+		  
 	  }
   
 	  .button-text {
