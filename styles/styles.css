@@ -46,7 +46,26 @@ html {
 	background-size: cover;
 }
 
-.cutout-text {
+.gif-bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1; /* Places the background behind everything */
+	background-size: cover;
+	background-position: center;
+
+	/* Full height */
+	height: 100%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+xt {
 	background-color: white;
 	color: black;
 	font-size: 10vw; /* Responsive font size */
@@ -56,7 +75,7 @@ html {
 
 	border-radius: 0.5em;
 
-	mix-blend-mode: screen; /* This makes the cutout text possible */
+	mix-blend-mode: screen; /* This makes the cutout text 0ssible */
 }
 
 .cutout-text-2 {
