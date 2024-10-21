@@ -61,7 +61,7 @@
 	transform: translate(-50%, -50%);
 	color: White;
 	font-weight: bold;
-	font-size: 1.1rem;
+	font-size: 5rem;
   }
   
   .box {
@@ -85,14 +85,14 @@
   .box .content .box-title {
 	display: block;
 	color: white;
-	font-size: 1.2rem;
+	font-size: 2.2rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
   }
   
   .box .content .box-text {
 	color: rgba(255, 255, 255, 0.738);
-	font-size: 0.8rem;
+	font-size: 2rem;
   }
   
   .box:hover {
