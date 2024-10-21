@@ -19,18 +19,7 @@
 	width: 80vmin;
 	height: 50vmin;
 	margin: 2rem auto;
-	border: 8px solid;
-	border-image: linear-gradient(
-			-50deg,
-			blue,
-			#0f3180,
-			skyblue,
-			rgb(113, 47, 175),
-			lightblue,
-			#579ae6,
-			rgb(34, 148, 176)
-		)
-		1;
+	border-radius: 0.5rem;
 	transition: 0.3s ease-in-out;
 	position: relative;
 	overflow: hidden;
@@ -55,9 +44,9 @@
 	border: 3px solid;
 	border-image: linear-gradient(
 			to bottom,
-			#3a1b6b 5%,
-			rgb(182, 12, 255) 35% 65%,
-			#3218da 95%
+			#FFFFFF 5%,
+			rgb(255, 255, 255) 35% 65%,
+			#FFFFFF 95%
 		)
 		0 0 0 100%;
 	transition: 0.3s ease-in-out 0.2s;
@@ -69,7 +58,6 @@
 	right: 0;
 	width: 53vmin;
 	height: 100%;
-	background-image: url("https://assets.codepen.io/4787486/trees.png");
 	background-size: cover;
 	transition: 0.3s ease-in-out;
 	/* border: 1px solid green; */
@@ -82,7 +70,7 @@
 	float: left;
 }
 
-.dots {
+/* .dots {
 	position: absolute;
 	bottom: 1rem;
 	right: 2rem;
@@ -101,7 +89,7 @@
 	border: 1px solid indigo;
 	border-radius: 50%;
 	transition: 0.3s ease-in-out 0.3s;
-}
+} */
 
 .text {
 	position: absolute;
