@@ -92,8 +92,17 @@
   
   .box .content .box-text {
 	color: rgba(255, 255, 255, 0.738);
-	font-size: 2rem;
+	font-size: 1.5rem;
   }
+
+  .box2 .content .box-text {
+	color: rgba(255, 255, 255, 0.738);
+	font-size: 1.5rem;
+		display:inline-block;
+		width: 90%;
+		text-align: left;
+  }
+
   
   .box:hover {
 	right: 0;
@@ -137,7 +146,7 @@
 	top: 50%;
 	left: 5px; /* Adjust distance from the box as needed */
 	transform: translateY(-50%);
-	font-size: 3rem;
+	font-size: 3vw;
 	font-weight: bold;
 	color: white;
 	writing-mode: vertical-rl; /* Vertical text mode */
@@ -169,3 +178,26 @@
   	backdrop-filter: blur(15px);
 }
   
+
+.typewriter h1 {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: 
+	  typing 5s steps(500, end),
+	  blink-caret .75s;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange; }
+  }
