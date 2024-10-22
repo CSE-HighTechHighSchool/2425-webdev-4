@@ -84,7 +84,7 @@
   
   .box .content .box-title {
 	display: block;
-	color: white;
+	color: rgb(0, 0, 0);
 	font-size: 2.2rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
@@ -96,7 +96,7 @@
   }
 
   .box2 .content .box-text {
-	color: rgba(255, 255, 255, 0.738);
+	color: rgba(0, 0, 0, 0.738);
 	font-size: 1.5rem;
 		display:inline-block;
 		width: 90%;
@@ -166,8 +166,8 @@
   	flex-direction: column;
   	justify-content: space-between;
 
-  	height: 80%;
-	width: 50%;
+  	height: 100%;
+	width: 100%;
   	padding: 35px;
 
   	border: 1px solid rgba(255, 255, 255, .25);
