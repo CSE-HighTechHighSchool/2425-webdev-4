@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Tornado Slideshow</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -20,74 +20,43 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/bootstrap.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
 
     <style>
-      .carousel-inner {
-        height: 100vh;
-      }
-
-      .carousel-item {
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .carousel-item::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        filter: blur(10px); /* Adjust the blur intensity here */
-        z-index: -1;
-      }
-
-      .carousel-item.active::before {
-        background-image: url("img/wildfire-1.png"); /* Set the background for the active slide */
-      }
-
-      .carousel-item:nth-child(2)::before {
-        background-image: url("img/wildfire-1.png"); /* Set the background for the second slide */
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        top: 50%;
-        transform: translateY(-50%);
-        width: 5%;
-      }
-
-      .carousel-control-prev {
-        left: 10px;
-      }
-
-      .carousel-control-next {
-        right: 10px;
-      }
-
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-      }
-
-      .rounded-div {
+      /* Container for the cutout text */
+      .text-container {
+        display: inline-block;
+        padding: 10px;
         background-color: white;
+      }
+
+      /* Cutout text effect */
+      h1.cutout-text {
+        font-size: 3rem;
+        font-weight: bold;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url("img/island-bg.svg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .card {
         padding: 20px;
-        border-radius: 15px;
-        margin-bottom: 10px;
-        width: 50rem;
-        z-index: 1;
-        position: relative;
+        border-radius: 10px;
+      }
+
+      /* Ensure body has full-screen background image */
+      body.scrolling {
+        background: url("img/wildfire-1.png") no-repeat center center fixed;
+        background-size: cover;
       }
     </style>
   </head>
 
-  <body>
+  <body class="scrolling">
     <header>
       <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
         <div class="container-fluid">
@@ -140,7 +109,7 @@
                     >Tsunamis</a
                   >
                   <a
-                    class="dropdown-item active hover-underline-animation"
+                    class="dropdown-item hover-underline-animation"
                     href="wildfires.html"
                     >Wildfires</a
                   >
@@ -159,7 +128,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link hover-underline-animation"
+                  class="nav-link active hover-underline-animation"
                   href="authors.html"
                   >Authors</a
                 >
@@ -170,145 +139,89 @@
       </nav>
     </header>
 
-    <main>
-      <div id="tornadoCarousel" class="carousel slide" data-interval="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div
-              class="container d-flex align-items-center"
-              style="height: 100vh"
-            >
-              <div class="col-md-6">
-                <div class="rounded-div">
-                  <h1 class="display-1" style="font-weight: bold; color: black">
-                    About Wildfires
-                  </h1>
+    <main class="index">
+      <div class="card">
+        <div
+          class="container text-center"
+          style="margin-top: 40vh; margin-right: 10vw"
+        >
+          <h1
+            class="text-center"
+            style="
+              font-size: 5rem;
+              padding: 10px;
+              display: inline-block;
+              font-weight: bold;
 
-                  <p class="lead" style="color: black">
-                    <strong>Definition</strong>: A wildfire is an uncontrolled
-                    fire that spreads rapidly through vegetation, often in rural
-                    areas, forests, grasslands, or other natural landscapes,
-                    driven by wind and dry conditions.
-                  </p>
-                  <p class="lead" style="color: black">
-                    <strong>Common Causes</strong>: <br />
-                    - Lightning strikes <br />
-                    - Human activities (campfires, discarded cigarettes,
-                    fireworks) <br />
-                    - Electrical equipment malfunctions (e.g., power lines)
-                    <br />
-                    - Arson
-                  </p>
-                </div>
-                <button class="learn-more learn-button" id="learnMoreBtn">
-                  <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                  </span>
-                  <span class="button-text">Learn More</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div
-              class="container d-flex align-items-center"
-              style="height: 100vh"
-            >
-              <div class="col-md-6">
-                <div class="rounded-div">
-                  <h1 class="display-1" style="font-weight: bold; color: black">
-                    Survival Tips
-                  </h1>
-
-                  <p class="lead" style="color: black">
-                    Evacuate early if advised by authorities
-                  </p>
-                  <p class="lead" style="color: black">
-                    Stay low to avoid smoke inhalation
-                  </p>
-                  <p class="lead" style="color: black">
-                    Use a mask or cloth to cover your nose and mouth to filter
-                    out smoke
-                  </p>
-                  <p class="lead" style="color: black">
-                    Stay informed via radio or official channels for updates on
-                    evacuation routes and safety measures
-                  </p>
-                </div>
-
-                <button
-                  class="learn-more learn-button"
-                  id="goBackBtn"
-                  role="button"
-                >
-                  <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                  </span>
-                  <span class="button-text">Go Back</span>
-                </button>
-              </div>
-            </div>
-          </div>
+              -webkit-text-stroke: 1px black;
+              color: white;
+              text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+                -1px 1px 0 #000, 1px 1px 0 #000;
+            "
+          >
+            Wildfires
+          </h1>
         </div>
 
-        <!-- Controls -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#tornadoCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#tornadoCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="box box2">
+          <div class="vertical-text">Information</div>
+          <div class="content">
+            <span class="box-title">Tsunamis</span>
+            <span class="box-text">
+              <strong>Definition</strong>: A wildfire is an uncontrolled fire
+              that spreads rapidly through vegetation, often in rural areas,
+              forests, grasslands, or other natural landscapes, driven by wind
+              and dry conditions. <br /><br />
+              <strong>Formation</strong>:
+              <div class="list-text" style="margin-top: 0">
+                <ol style="color: #ffeac8; padding-left: 20px">
+                  <li>Lightning strikes</li>
+                  <li>
+                    Human activities (campfires, discarded cigarettes,
+                    fireworks)
+                  </li>
+                  <li>Electrical equipment malfunctions (e.g., power lines)</li>
+                  <li>Arson</li>
+                </ol>
+              </div>
+              <br /><br />
+              <strong>Tsunamis</strong>: Tsunamis are categorized by a new
+              Tsunami Intensity Scale. This scale has 12 points, depending on
+              how felt it is and the damage it causes.
+            </span>
+          </div>
+        </div>
+        <div class="box box1">
+          <div class="vertical-text">Safety</div>
+          <div class="content">
+            <span class="box-title">Safety</span>
+            <span class="box-text">
+              <p class="lead" style="color: ffdbce">
+                Evacuate early if advised by authorities <br><br>
+                Stay low to avoid smoke inhalation <br><br>
+                Use a mask or cloth to cover your nose and mouth to filter out smoke <br><br>
+                Stay informed via radio or official channels for updates on evacuation routes and safety measures
+              </p>
+            </span>
+          </div>
+        </div>
       </div>
-
-      <script>
-        document
-          .getElementById("learnMoreBtn")
-          .addEventListener("click", function () {
-            var carousel = new bootstrap.Carousel(
-              document.querySelector("#tornadoCarousel")
-            );
-            carousel.next(); // Move to the next slide
-          });
-      </script>
-      <script>
-        document
-          .getElementById("goBackBtn")
-          .addEventListener("click", function () {
-            var carousel = new bootstrap.Carousel(
-              document.querySelector("#tornadoCarousel")
-            );
-            carousel.prev(); // Move to the previous slide
-          });
-      </script>
     </main>
 
     <footer
       style="
-        margin: 0rem 2rem 0rem 0rem;
+        margin: 0rem 0rem 0rem 2rem;
         position: fixed;
         bottom: 0;
-        right: 0;
+        left: 0;
         color: white;
         padding: 10px;
         border-radius: 5px;
       "
     >
+      <!-- place footer content here -->
       <p>Template footer</p>
     </footer>
-
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
