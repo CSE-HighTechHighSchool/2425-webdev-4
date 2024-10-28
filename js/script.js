@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     gif.addEventListener("load", function() {
-        setTimeout(showNextGif, 6000); // Change GIF every 5 seconds
+        setTimeout(showNextGif, 6000); // Change GIF every 6 seconds
     });
 
     showNextGif();
