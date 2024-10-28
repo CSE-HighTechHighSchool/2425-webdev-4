@@ -177,12 +177,12 @@ html {
 }
 
 .hero-section {
-	min-height: calc(100vh - 76px);
+	min-height: calc(94vh - 76px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	padding: 2rem;
+	padding-top: 2rem;
 }
 
 .hero-content {
