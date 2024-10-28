@@ -1,312 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Tornado Slideshow</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+	<head>
+		<title>Hurricanes - Natural Disasters</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/bootstrap.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="stylesheet" href="styles/cards.css" />
+		<style>
+			body {
+				background: url("img/hurricane-on-beach.webp") no-repeat center
+					center fixed;
+				background-size: cover;
+				min-height: 100vh;
+				color: white;
+			}
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+			.overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0.3),
+					rgba(0, 0, 0, 0.6)
+				);
+				z-index: 0;
+			}
+		</style>
+	</head>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/bootstrap.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
+	<body class="scrolling">
+		<div class="overlay"></div>
 
-    <style>
-      .carousel-inner {
-        height: 100vh;
-      }
+		<!-- Navbar -->
+		<header>
+			<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="index.html">
+						<img
+							src="img/tornado-solid.svg"
+							alt="Tornado Icon"
+							class="icon"
+						/>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarColor01"
+						aria-controls="navbarColor01"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarColor01">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a
+									class="nav-link hover-underline-animation"
+									href="index.html"
+									>Home
+									<span class="visually-hidden"
+										>(current)</span
+									>
+								</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link dropdown-toggle hover-underline-animation"
+									data-bs-toggle="dropdown"
+									href="#"
+									role="button"
+									aria-haspopup="true"
+									aria-expanded="false"
+									>Natural Disasters</a
+								>
+								<div class="dropdown-menu">
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="tornados.html"
+										>Tornados</a
+									>
+									<a
+										class="dropdown-item active hover-underline-animation"
+										href="hurricanes.html"
+										>Hurricanes</a
+									>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="tsunamis.html"
+										>Tsunamis</a
+									>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="wildfires.html"
+										>Wildfires</a
+									>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="landslides.html"
+										>Landslides</a
+									>
+									<div class="dropdown-divider"></div>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="references.html"
+										>References</a
+									>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link hover-underline-animation"
+									href="authors.html"
+									>Authors</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="main-content">
+			<div class="container">
+				<div class="title-section">
+					<h1 class="page-title">Hurricanes</h1>
+				</div>
 
-      .carousel-item {
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
-      }
+				<div class="info-cards">
+					<div class="info-card">
+						<h2 class="card-title">
+							<i class="fas fa-info-circle"></i>
+							Information
+						</h2>
+						<div class="card-content">
+							<p>
+								<span class="section-highlight"
+									>Definition</span
+								>
+								Hurricanes are intense tropical storms
+								characterized by strong winds of 74 mph or
+								higher, heavy rainfall, and dangerous storm
+								surges. These elements combine to create
+								potentially devastating impacts on coastal and
+								inland areas alike.
+							</p>
+							<p>
+								<span class="section-highlight">Formation</span>
+								Hurricanes develop over warm ocean waters in
+								tropical regions, where they draw energy from
+								the heat and moisture. As they travel, these
+								powerful storms intensify, growing stronger with
+								each mile across the warm seas.
+							</p>
+							<p>
+								<span class="section-highlight"
+									>Categories</span
+								>
+								Hurricanes are classified by wind speed on the
+								Saffir-Simpson scale, which ranges from Category
+								1 to Category 5. Category 5 hurricanes are the
+								most severe, featuring extreme winds capable of
+								causing catastrophic damage.
+							</p>
+						</div>
+					</div>
 
-      .carousel-item::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        filter: blur(10px); /* Adjust the blur intensity here */
-        z-index: -1;
-      }
+					<div class="info-card">
+						<h2 class="card-title">
+							<i class="fas fa-shield-alt"></i>
+							Safety Guidelines
+						</h2>
+						<div class="card-content">
+							<p>
+								<span class="section-highlight"
+									>Before the Storm</span
+								>
+								Before a hurricane, prepare an emergency kit
+								with essentials like food, water, and
+								medications. Familiarize yourself with
+								evacuation routes, and secure your home by
+								installing shutters and bringing in any outdoor
+								items that could become hazards.
+							</p>
+							<p>
+								<span class="section-highlight"
+									>During the Storm</span
+								>
+								During the storm, stay indoors and keep away
+								from windows to avoid flying debris. Follow any
+								evacuation orders immediately if they’re issued,
+								and use emergency alerts to stay informed about
+								the storm’s progress and safety updates.
+							</p>
+							<p>
+								<span class="section-highlight"
+									>After the Storm</span
+								>
+								Avoid floodwaters and damaged areas. Check for
+								power lines or structural damage.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      .carousel-item.active::before {
-        background-image: url("img/hurricane-space-view.webp"); /* Set the background for the active slide */
-      }
+			<footer style="color: white; margin-top: 2rem; text-align: center">
+				<!-- place footer content here -->
+				<p>&copy; Software Engineering 2024-2025</p>
+			</footer>
+		</main>
 
-      .carousel-item:nth-child(2)::before {
-        background-image: url("img/hurricane-on-beach.webp"); /* Set the background for the second slide */
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        top: 50%;
-        transform: translateY(-50%);
-        width: 5%;
-      }
-
-      .carousel-control-prev {
-        left: 10px;
-      }
-
-      .carousel-control-next {
-        right: 10px;
-      }
-
-      .carousel-caption {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-      }
-
-      .rounded-div {
-        background-color: white;
-        padding: 20px;
-        border-radius: 15px;
-        margin-bottom: 10px;
-        width: 50rem;
-        z-index: 1;
-        position: relative;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/tornado-solid.svg" alt="Tornado Icon" class="icon" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarColor01"
-            aria-controls="navbarColor01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="index.html"
-                  >Home
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle hover-underline-animation"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  >Natural Disasters</a
-                >
-                <div class="dropdown-menu">
-                  <a
-                    class="dropdown-item hover-underline-animation"
-                    href="tornados.html"
-                    >Tornados</a
-                  >
-                  <a
-                    class="dropdown-item active hover-underline-animation"
-                    href="hurricanes.html"
-                    >Hurricanes</a
-                  >
-                  <a
-                    class="dropdown-item hover-underline-animation"
-                    href="tsunamis.html"
-                    >Tsunamis</a
-                  >
-                  <a
-                    class="dropdown-item hover-underline-animation"
-                    href="wildfires.html"
-                    >Wildfires</a
-                  >
-                  <a
-                    class="dropdown-item hover-underline-animation"
-                    href="landslides.html"
-                    >Landslides</a
-                  >
-                  <div class="dropdown-divider"></div>
-                  <a
-                    class="dropdown-item hover-underline-animation"
-                    href="references.html"
-                    >References</a
-                  >
-                </div>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link hover-underline-animation"
-                  href="authors.html"
-                  >Authors</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <div id="tornadoCarousel" class="carousel slide" data-interval="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div
-              class="container d-flex align-items-center"
-              style="height: 100vh"
-            >
-              <div class="col-md-6">
-                <div class="rounded-div">
-                  <h1 class="display-1" style="font-weight: bold; color: black">
-                    About Hurricanes
-                  </h1>
-
-                  <p class="lead" style="color: black">
-                    <strong>Definition</strong>: Hurricanes are powerful
-                    tropical storms with strong winds (74 mph or higher), heavy
-                    rains, and storm surges.
-                  </p>
-                  <p class="lead" style="color: black">
-                    <strong>Formation</strong>: They form over warm ocean waters
-                    in tropical regions, gaining energy as they travel.
-                  </p>
-                  <p class="lead" style="color: black">
-                    <strong>Hurricanes</strong>: Hurricanes are categorized by
-                    wind speed using the Saffir-Simpson scale (Category 1-5).
-                  </p>
-                </div>
-                <button class="learn-more learn-button" id="learnMoreBtn">
-                  <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                  </span>
-                  <span class="button-text">Learn More</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div
-              class="container d-flex align-items-center"
-              style="height: 100vh"
-            >
-              <div class="col-md-6">
-                <div class="rounded-div">
-                  <h1 class="display-1" style="font-weight: bold; color: black">
-                    Survival Tips
-                  </h1>
-
-                  <p class="lead" style="color: black">
-                    <strong>Before the storm</strong>: Create an emergency kit
-                    (food, water, medicines). Know your evacuation routes.
-                    Secure your home (shutters, bring in outdoor items).
-                  </p>
-                  <p class="lead" style="color: black">
-                    <strong>During the storm</strong>: Stay indoors, away from
-                    windows. Follow evacuation orders if issued. Use
-                    radio/alerts for updates.
-                  </p>
-                  <p class="lead" style="color: black">
-                    <strong>After the storm</strong>: Avoid floodwaters and
-                    damaged areas. Check for power lines or structural damage.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#tornadoCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#tornadoCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <script>
-        document
-          .getElementById("learnMoreBtn")
-          .addEventListener("click", function () {
-            var carousel = new bootstrap.Carousel(
-              document.querySelector("#tornadoCarousel")
-            );
-            carousel.next(); // Move to the next slide
-          });
-      </script>
-      <script>
-        document
-          .getElementById("goBackBtn")
-          .addEventListener("click", function () {
-            var carousel = new bootstrap.Carousel(
-              document.querySelector("#tornadoCarousel")
-            );
-            carousel.prev(); // Move to the previous slide
-          });
-      </script>
-    </main>
-
-    <footer
-      style="
-        margin: 0rem 2rem 0rem 0rem;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-      "
-    >
-      <p>&copy; Software Engineering 2024-2025</p>
-    </footer>
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+	</body>
 </html>
