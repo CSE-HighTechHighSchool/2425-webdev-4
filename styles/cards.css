@@ -1,231 +1,173 @@
-.card {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	background: transparent;
-	overflow: hidden;
-	border: transparent;
-	/* box-shadow: rgba(141, 177, 205, 0.618) 0px 40px 30px -25px; */
-	transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  }
-  
-  /* .card:hover {
-	transform: scale(1.08);
-	box-shadow: rgba(141, 177, 205, 0.618) 0px 30px 30px -25px;
-  } */
-  
-  .icons-container {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding: 1rem;
-	z-index: 999;
-  }
-  
-  .icons-container .svg {
-	stroke: white;
-	width: 20px;
-	transition: transform 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  }
-  
-  .icons-container .svg:hover {
-	transform: scale(1.5);
-	stroke: black;
-  }
-  
-  .icons-container .twitter {
-	fill: white;
-  }
-  
-  .icons-container .twitter:hover {
-	fill: black;
-	stroke: none;
-  }
-  
-  .logo {
-	width: 50px;
-	padding: 1rem;
-  }
-  
-  .logo .svg {
-	fill: white;
-  }
-  
-  .title {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: transform(-50%, -50%);
-	color: White;
-	font-weight: bold;
-	font-size: 5rem;
-  }
-  
-  .box {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	box-shadow: rgba(66, 66, 66, 0.349) 5px 0px 10px 0px inset;
-	transition: all 0.5s ease-in-out;
+.info-cards {
 	display: grid;
-	place-content: center;
-	padding: 2rem 2rem 3rem 2rem;
-  }
-  
-  .box .content {
-	position: relative;
-	opacity: 0;
-	transition: all 0.5s ease-in-out 0.3s;
-  }
-  
-  .box .content .box-title {
-	display: block;
-	color: rgb(0, 0, 0);
-	font-size: 2.2rem;
-	font-weight: bold;
-	margin-bottom: 1rem;
-  }
-  
-  .box .content .box-text {
-	color: rgba(0, 0, 0, 0.738);
-	font-size: 1.5rem;
-  }
-
-  .box2 .content .box-text {
-	color: rgba(0, 0, 0, 0.738);
-	font-size: 1.5rem;
-		display:inline-block;
-		width: 90%;
-		text-align: left;
-  }
-
-  
-  .box:hover {
-	right: 0;
-	top: 0;
-	border-radius: 0;
-
-	box-shadow: rgba(66, 66, 66, 0) 5px 0px 10px 0px inset;
-  }
-  
-  .box:hover .content {
-	transform: translate(0, 0);
-	opacity: 1;
-  }
-  
-  .box1 {
-	top: 0%;
-	right: -95%;
-	background: rgb(255, 112, 60);
-	border-radius: 0px;
-  }
-  
-  .box2 {
-	top: 0%;
-	right: -90%;
-	background:rgb(255, 174, 0);
-	border-radius: 0px;
-  }
-  
-  .box3 {
-	top: 0%;
-	right: -85%;
-	background: rgb(255, 194, 52);
-	border-radius: 0px;
-  }
-
-  .box:hover .vertical-text {
-	opacity: 0; /* Show vertical text when box is hovered */
-  }
-  .vertical-text {
-	position: absolute;
-	top: 50%;
-	left: 5px; /* Adjust distance from the box as needed */
-	transform: translateY(-50%);
-	font-size: 3vw;
-	font-weight: bold;
-	color: white;
-	writing-mode: vertical-rl; /* Vertical text mode */
-	text-orientation: mixed; /* Ensure correct orientation */
-	opacity: 1;
-	transition: opacity 0.5s ease-in-out;
-  }
-  
-
-  .card-2 {
-	color: #224;
-  	background:
-    url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
-    center / cover no-repeat fixed;
-	
-  	display: flex;
-  	flex-direction: column;
-  	justify-content: space-between;
-
-  	height: 100%;
-	width: 100%;
-  	padding: 35px;
-
-  	border: 1px solid rgba(255, 255, 255, .25);
-  	border-radius: 20px;
-  	background-color: rgba(255, 255, 255, 0.45);
-  	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-
-  	backdrop-filter: blur(15px);
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
 }
-  
 
-.typewriter h1 {
-	overflow: hidden; /* Ensures the content is not revealed until the animation */
-	border-right: .15em solid orange; /* The typwriter cursor */
-	white-space: nowrap; /* Keeps the content on a single line */
-	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	letter-spacing: .15em; /* Adjust as needed */
-	animation: 
-	  typing 5s steps(500, end),
-	  blink-caret .75s;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-	from { width: 0 }
-	to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-	from, to { border-color: transparent }
-	50% { border-color: orange; }
-  }
+.info-card {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 2rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
 
-  .typing-demo {
-	width: 20.5ch;
-	animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 3px solid;
-	font-family: monospace;
-	font-size: 2em;
-  }
-  
-  @keyframes typing {
+.info-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.card-content {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.info-card p {
+	margin-bottom: 1rem;
+}
+
+@keyframes fadeInDown {
 	from {
-	  width: 0
+		opacity: 0;
+		transform: translateY(-20px);
 	}
-  }
-	  
-  @keyframes blink {
-	50% {
-	  border-color: transparent
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
-  }
+}
 
-  .wrapper {
-	height: 100vh;
-	/*This part is important for centering*/
-	display: grid;
-	place-items: center;
-  }
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.info-card {
+	animation: fadeIn 1s ease-out forwards;
+	opacity: 0;
+}
+
+.info-card:nth-child(1) {
+	animation-delay: 0.3s;
+}
+.info-card:nth-child(2) {
+	animation-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+	.page-title {
+		font-size: 3rem;
+	}
+
+	.main-content {
+		padding: 1rem;
+	}
+
+	.info-cards {
+		grid-template-columns: 1fr;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.team-card {
+	animation: fadeInDown 0.6s ease-out forwards;
+	opacity: 0;
+}
+
+.team-card:nth-child(1) {
+	animation-delay: 0.2s;
+}
+.team-card:nth-child(2) {
+	animation-delay: 0.4s;
+}
+.team-card:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+	.page-title {
+		font-size: 2.5rem;
+	}
+
+	.team-grid {
+		padding: 1rem;
+	}
+
+	.profile-image-wrapper {
+		width: 150px;
+		height: 150px;
+	}
+
+	.page-header {
+		margin: 2rem 1rem;
+		padding: 1.5rem;
+	}
+}
+
+.home-card {
+	animation: fadeInDown 0.6s ease-out forwards;
+	opacity: 0;
+}
+
+.team-card {
+	background: rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+	padding: 2rem;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	position: relative;
+	overflow: hidden;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.team-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.team-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.team-card:hover::before {
+	opacity: 1;
+}
