@@ -1,211 +1,229 @@
+<!-- 
+File: landslides.html
+Description: This file contains the HTML code for the Landslides page of the website. 
+It provides information about landslides, their causes, types, and safety guidelines for 
+dealing with them. The page includes a navigation bar, title section, and two information 
+cards with details about landslides and safety guidelines. The footer contains the copyright
+information for the website.  
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Landslides - Natural Disasters</title>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="styles/bootstrap.css" />
-		<link rel="stylesheet" href="styles/styles.css" />
-		<link rel="stylesheet" href="styles/cards.css" />
-		<style>
-			body {
-				background: url("img/landslide-aerial.jpeg") no-repeat center
-					center fixed;
-				background-size: cover;
-				min-height: 100vh;
-				color: white;
-			}
+  <head>
+    <!-- Page title and metadata -->
+    <title>Landslides - Natural Disasters</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-			.overlay {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(
-					to bottom,
-					rgba(0, 0, 0, 0.3),
-					rgba(0, 0, 0, 0.6)
-				);
-				z-index: 0;
-			}
-		</style>
-	</head>
+    <!-- Importing Bootstrap CSS for styling and layout -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-	<body class="scrolling">
-		<div class="overlay"></div>
+    <!-- Importing Font Awesome icons for visual enhancement -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-		<!-- Navbar -->
-		<header>
-			<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="index.html">
-						<img
-							src="img/tornado-solid.svg"
-							alt="Tornado Icon"
-							class="icon"
-						/>
-					</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarColor01"
-						aria-controls="navbarColor01"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarColor01">
-						<ul class="navbar-nav ms-auto">
-							<li class="nav-item">
-								<a
-									class="nav-link hover-underline-animation"
-									href="index.html"
-									>Home
-									<span class="visually-hidden"
-										>(current)</span
-									>
-								</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a
-									class="nav-link dropdown-toggle hover-underline-animation"
-									data-bs-toggle="dropdown"
-									href="#"
-									role="button"
-									aria-haspopup="true"
-									aria-expanded="false"
-									>Natural Disasters</a
-								>
-								<div class="dropdown-menu">
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="tornados.html"
-										>Tornados</a
-									>
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="hurricanes.html"
-										>Hurricanes</a
-									>
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="tsunamis.html"
-										>Tsunamis</a
-									>
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="wildfires.html"
-										>Wildfires</a
-									>
-									<a
-										class="dropdown-item active hover-underline-animation"
-										href="landslides.html"
-										>Landslides</a
-									>
-									<div class="dropdown-divider"></div>
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="references.html"
-										>References</a
-									>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link hover-underline-animation"
-									href="authors.html"
-									>Authors</a
-								>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<main class="main-content">
-			<div class="container">
-				<div class="title-section">
-					<h1 class="page-title">Landslides</h1>
-				</div>
+    <!-- Linking external CSS files for additional styling -->
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
 
-				<div class="info-cards">
+    <!-- Inline CSS for setting the page background and text color -->
+    <style>
+      body {
+        background: url("img/landslide-aerial.jpeg") no-repeat center center
+          fixed;
+        background-size: cover;
+        min-height: 100vh;
+        color: white;
+      }
+
+      /* Overlay for gradient effect over the background image */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.6)
+        );
+        z-index: 0;
+      }
+    </style>
+  </head>
+
+  <body class="scrolling">
+    <!-- Gradient overlay for visual effect -->
+    <div class="overlay"></div>
+
+    <!-- Navigation bar with collapsible dropdown menu -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+          <!-- Brand logo and link to homepage -->
+          <a class="navbar-brand" href="index.html">
+            <img src="img/tornado-solid.svg" alt="Tornado Icon" class="icon" />
+          </a>
+          <!-- Toggle button for mobile view -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Collapsible navbar content -->
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ms-auto">
+              <!-- Link to Home page -->
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="index.html"
+                  >Home <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <!-- Dropdown menu for Natural Disasters -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle hover-underline-animation"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Natural Disasters</a
+                >
+                <div class="dropdown-menu">
+                  <!-- Links to individual disaster pages -->
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="tornados.html"
+                    >Tornados</a
+                  >
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="hurricanes.html"
+                    >Hurricanes</a
+                  >
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="tsunamis.html"
+                    >Tsunamis</a
+                  >
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="wildfires.html"
+                    >Wildfires</a
+                  >
+                  <a
+                    class="dropdown-item active hover-underline-animation"
+                    href="landslides.html"
+                    >Landslides</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="references.html"
+                    >References</a
+                  >
+                </div>
+              </li>
+              <!-- Link to Authors page -->
+              <li class="nav-item">
+                <a
+                  class="nav-link hover-underline-animation"
+                  href="authors.html"
+                  >Authors</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Page title -->
+        <div class="title-section">
+          <h1 class="page-title">Landslides</h1>
+        </div>
+
+        <!-- Information and safety guideline cards -->
+        <div class="info-cards">
+          <!-- Card containing information about landslides -->
           <div class="info-card">
             <h2 class="card-title">
-              <i class="fas fa-info-circle"></i>
-              Information
+              <i class="fas fa-info-circle"></i> Information
             </h2>
             <div class="card-content">
               <p>
                 <span class="section-highlight">Definition</span>
-                Landslides are the downward movement of rock, soil, and organic matter
-                on a slope due to gravity. They can be triggered by factors such as heavy
-                rainfall, earthquakes, volcanic activity, or human activities like deforestation.
+                Landslides are the downward movement of rock, soil, and organic
+                matter on a slope due to gravity.
               </p>
               <p>
                 <span class="section-highlight">Types of Landslides</span>
-                Landslides vary in type and speed, including rockfalls, debris flows, and 
-                slow-moving earth slides. Each type poses unique hazards depending on the 
-                geography and conditions of the area.
+                Landslides vary in type and speed, including rockfalls, debris
+                flows, and slow-moving earth slides.
               </p>
               <p>
                 <span class="section-highlight">Causes</span>
-                Landslides are often caused by natural forces, including heavy rains, rapid snowmelt, 
-                and earthquakes, which weaken slopes. Human activities, like road construction 
-                and mining, can also destabilize land, increasing the likelihood of landslides.
+                Landslides are often caused by natural forces such as rain,
+                snowmelt, or earthquakes. Human activities, like road
+                construction and mining, can also destabilize land.
               </p>
             </div>
           </div>
-        
+
+          <!-- Card containing safety guidelines for landslides -->
           <div class="info-card">
             <h2 class="card-title">
-              <i class="fas fa-shield-alt"></i>
-              Safety Guidelines
+              <i class="fas fa-shield-alt"></i> Safety Guidelines
             </h2>
             <div class="card-content">
               <p>
                 <span class="section-highlight">Before a Landslide</span>
-                Stay informed about areas prone to landslides and watch for warning signs 
-                such as cracks in walls, tilting trees, or unusual sounds of rocks or soil movement. 
-                Prepare an emergency kit and develop an evacuation plan for rapid action.
+                Stay informed about areas prone to landslides and prepare an
+                emergency kit and evacuation plan.
               </p>
               <p>
                 <span class="section-highlight">During a Landslide</span>
-                If indoors, take shelter under sturdy furniture. If outdoors, move quickly to 
-                higher ground and avoid valleys or low-lying areas. Listen to emergency alerts and 
-                follow evacuation orders if issued.
+                Take shelter under sturdy furniture if indoors, or move to
+                higher ground if outdoors. Follow emergency alerts and
+                evacuation orders.
               </p>
               <p>
                 <span class="section-highlight">After a Landslide</span>
-                Avoid the affected area to reduce the risk of secondary slides. Stay alert for
-                flooding or structural damage, and report any downed power lines or broken 
-                utility connections to authorities.
+                Avoid the affected area, stay alert for secondary slides, and
+                report any structural damage to authorities.
               </p>
             </div>
           </div>
         </div>
-        
+      </div>
+      <footer style="color: white; margin-top: 2rem; text-align: center">
+        <!-- place footer content here -->
+        <p>&copy; Software Engineering 2024-2025</p>
+      </footer>
+    </main>
 
-			<footer style="color: white; margin-top: 2rem; text-align: center">
-				<!-- place footer content here -->
-				<p>&copy; Software Engineering 2024-2025</p>
-			</footer>
-		</main>
-
-		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-	</body>
+    <!-- JavaScript for Bootstrap components functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>
