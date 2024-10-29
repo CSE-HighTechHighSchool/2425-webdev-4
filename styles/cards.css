@@ -1,3 +1,8 @@
+/* Cards Styles */
+
+
+// Info Cards: 
+// - Display a grid of cards with information about each natural disaster.
 .info-cards {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -5,6 +10,8 @@
 	margin-top: 2rem;
 }
 
+// Info Card:
+// - Display a card with information about a natural disaster.
 .info-card {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
@@ -16,11 +23,15 @@
 	cursor: pointer;
 }
 
+// Info Card Hover:
+// - When hovering over an info card, scale it up and add a shadow.
 .info-card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+// Card Title:
+// - Style the title of the card.
 .card-title {
 	font-size: 1.5rem;
 	font-weight: 600;
@@ -31,15 +42,23 @@
 	gap: 0.5rem;
 }
 
+
+// Card Content:
+// - Style the content of the card.
 .card-content {
 	font-size: 1rem;
 	line-height: 1.6;
 	color: rgba(255, 255, 255, 0.9);
 }
 
+// Info Card paragraph text:
+// - Style the paragraph text in the info card.
 .info-card p {
 	margin-bottom: 1rem;
 }
+
+// Animations:
+// - Add animations to the cards.
 
 @keyframes fadeInDown {
 	from {
@@ -58,6 +77,17 @@
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -87,53 +117,9 @@
 	}
 }
 
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
+// Team Cards:
+// - Display a grid of cards with information about each team member.
 .team-card {
-	animation: fadeInDown 0.6s ease-out forwards;
-	opacity: 0;
-}
-
-.team-card:nth-child(1) {
-	animation-delay: 0.2s;
-}
-.team-card:nth-child(2) {
-	animation-delay: 0.4s;
-}
-.team-card:nth-child(3) {
-	animation-delay: 0.6s;
-}
-
-@media (max-width: 768px) {
-	.page-title {
-		font-size: 2.5rem;
-	}
-
-	.team-grid {
-		padding: 1rem;
-	}
-
-	.profile-image-wrapper {
-		width: 150px;
-		height: 150px;
-	}
-
-	.page-header {
-		margin: 2rem 1rem;
-		padding: 1.5rem;
-	}
-}
-
-.home-card {
 	animation: fadeInDown 0.6s ease-out forwards;
 	opacity: 0;
 }
@@ -171,6 +157,46 @@
 .team-card:hover::before {
 	opacity: 1;
 }
+
+.team-card:nth-child(1) {
+	animation-delay: 0.2s;
+}
+.team-card:nth-child(2) {
+	animation-delay: 0.4s;
+}
+.team-card:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+	.page-title {
+		font-size: 2.5rem;
+	}
+
+	.team-grid {
+		padding: 1rem;
+	}
+
+	.profile-image-wrapper {
+		width: 150px;
+		height: 150px;
+	}
+
+	.page-header {
+		margin: 2rem 1rem;
+		padding: 1.5rem;
+	}
+}
+
+
+// Home Card:
+// - Display a card on the home page.
+.home-card {
+	animation: fadeInDown 0.6s ease-out forwards;
+	opacity: 0;
+}
+
+
 
 .reference-card {
 	animation: fadeInUp 0.6s ease-out forwards;
