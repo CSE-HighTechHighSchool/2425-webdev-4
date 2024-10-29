@@ -14,6 +14,7 @@ The page also provides a brief bio of each author and their interests in compute
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
+		<!-- Bootstrap and Font Awesome CSS for layout and icons -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -22,12 +23,14 @@ The page also provides a brief bio of each author and their interests in compute
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
 			rel="stylesheet"
 		/>
+		<!-- Custom CSS for page styling -->
 		<link rel="stylesheet" href="styles/bootstrap.css" />
 		<link rel="stylesheet" href="styles/styles.css" />
 		<link rel="stylesheet" href="styles/cards.css" />
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
+			/* Background styling for the page */
 			.bg-image {
 				position: fixed;
 				top: 0;
@@ -43,13 +46,17 @@ The page also provides a brief bio of each author and their interests in compute
 			}
 		</style>
 	</head>
+
 	<body>
+		<!-- Background image container -->
 		<div class="bg-image"></div>
 
+		<!-- Header section with navigation bar -->
 		<header>
 			<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="index.html">
+						<!-- Icon for the home page link -->
 						<img
 							src="img/tornado-solid.svg"
 							alt="Tornado Icon"
@@ -68,6 +75,7 @@ The page also provides a brief bio of each author and their interests in compute
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarColor01">
+						<!-- Navigation links -->
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
 								<a
@@ -80,6 +88,7 @@ The page also provides a brief bio of each author and their interests in compute
 								</a>
 							</li>
 							<li class="nav-item dropdown">
+								<!-- Dropdown for various natural disasters pages -->
 								<a
 									class="nav-link dropdown-toggle hover-underline-animation"
 									data-bs-toggle="dropdown"
@@ -136,6 +145,7 @@ The page also provides a brief bio of each author and their interests in compute
 			</nav>
 		</header>
 
+		<!-- Main content section -->
 		<main>
 			<div class="container">
 				<div class="page-header">
@@ -147,8 +157,9 @@ The page also provides a brief bio of each author and their interests in compute
 					</p>
 				</div>
 
+				<!-- Author profiles displayed in a grid layout -->
 				<div class="team-grid">
-					<!-- Remy Mander -->
+					<!-- Author profile: Remy Mander -->
 					<div class="team-card">
 						<div class="profile-image-wrapper">
 							<img
@@ -170,28 +181,30 @@ The page also provides a brief bio of each author and their interests in compute
 						</p>
 					</div>
 
-          <!-- Suvit Asnani -->
-          <div class="team-card">
-            <div class="profile-image-wrapper">
-              <img
-                src="img/compressed-suvit.png"
-                alt="Suvit Asnani"
-                class="profile-image"
-              />
-            </div>
-            <h2 class="member-name">Suvit Asnani</h2>
-            <p class="member-bio">
-              Suvit Asnani is a Junior at High Technology High School. He is
-              interested in software development and engineering. Suvit is also
-              passionate about helping the environment. He recognizes the
-              dangers that we face todays and works on fixes them. For example,
-              he most recently completed his Eagle Project, collecting over 8200
-              pounds of E-Waste. He hopes that this website raises awareness on
-              the dangers of global warmings and its effect.
-            </p>
-          </div>
+					<!-- Author profile: Suvit Asnani -->
+					<div class="team-card">
+						<div class="profile-image-wrapper">
+							<img
+								src="img/compressed-suvit.png"
+								alt="Suvit Asnani"
+								class="profile-image"
+							/>
+						</div>
+						<h2 class="member-name">Suvit Asnani</h2>
+						<p class="member-bio">
+							Suvit Asnani is a Junior at High Technology High
+							School. He is interested in software development and
+							engineering. Suvit is also passionate about helping
+							the environment. He recognizes the dangers that we
+							face today and works on fixing them. For example,
+							he most recently completed his Eagle Project,
+							collecting over 8200 pounds of E-Waste. He hopes
+							that this website raises awareness on the dangers
+							of global warming and its effect.
+						</p>
+					</div>
 
-					<!-- Rohan Arni -->
+					<!-- Author profile: Rohan Arni -->
 					<div class="team-card">
 						<div class="profile-image-wrapper">
 							<img
@@ -214,6 +227,7 @@ The page also provides a brief bio of each author and their interests in compute
 				</div>
 			</div>
 
+			<!-- Footer content -->
 			<footer
 				style="
 					color: white;
@@ -222,11 +236,11 @@ The page also provides a brief bio of each author and their interests in compute
 					text-align: center;
 				"
 			>
-				<!-- place footer content here -->
 				<p>&copy; Software Engineering 2024-2025</p>
 			</footer>
 		</main>
 
+		<!-- Bootstrap and Popper.js scripts -->
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 	</body>
