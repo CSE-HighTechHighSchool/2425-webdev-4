@@ -1,17 +1,40 @@
+<!-- 
+File: tornados.html
+Description: This file contains the HTML code for the Tornadoes page of the website. 
+It provides information on tornadoes, including definitions, categories, and safety guidelines. 
+The page includes a navigation bar, title section, and info cards with detailed descriptions.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Page Title and Character Encoding -->
     <title>Tornadoes - Natural Disasters</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Responsive Viewport for Mobile Devices -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- External CSS Libraries: Bootstrap and Font Awesome -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Stylesheets for Additional Styling -->
     <link rel="stylesheet" href="styles/bootstrap.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/cards.css" />
-    <style>
 
-    
+    <!-- Internal Styling for Background Image and Overlay -->
+    <style>
       body {
         background: url("img/tornado_1.jpg") no-repeat center center fixed;
         background-size: cover;
@@ -19,31 +42,36 @@
         color: white;
       }
 
+      /* Gradient Overlay for Background */
       .overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.6)
+        );
         z-index: 0;
       }
-
-
-     
     </style>
   </head>
 
   <body class="scrolling">
+    <!-- Overlay Background -->
     <div class="overlay"></div>
-    
-    <!-- Navbar -->
+
+    <!-- Navbar Section for Navigation -->
     <header>
       <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
         <div class="container-fluid">
+          <!-- Logo Linking Back to Home -->
           <a class="navbar-brand" href="index.html">
             <img src="img/tornado-solid.svg" alt="Tornado Icon" class="icon" />
           </a>
+          <!-- Navbar Toggler for Collapsible Menu on Mobile -->
           <button
             class="navbar-toggler"
             type="button"
@@ -55,14 +83,19 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Navbar Links -->
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav ms-auto">
+              <!-- Link to Home Page -->
               <li class="nav-item">
                 <a class="nav-link hover-underline-animation" href="index.html"
                   >Home
                   <span class="visually-hidden">(current)</span>
                 </a>
               </li>
+
+              <!-- Dropdown Menu for Natural Disasters -->
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle hover-underline-animation"
@@ -107,6 +140,8 @@
                   >
                 </div>
               </li>
+
+              <!-- Link to Authors Page -->
               <li class="nav-item">
                 <a
                   class="nav-link hover-underline-animation"
@@ -119,13 +154,18 @@
         </div>
       </nav>
     </header>
+
+    <!-- Main Content Section for Tornado Information -->
     <main class="main-content">
       <div class="container">
+        <!-- Title Section for Page Heading -->
         <div class="title-section">
           <h1 class="page-title">Tornadoes</h1>
         </div>
 
+        <!-- Info Cards Section for Tornado Details -->
         <div class="info-cards">
+          <!-- Information Card for Tornado Definition and Formation -->
           <div class="info-card">
             <h2 class="card-title">
               <i class="fas fa-info-circle"></i>
@@ -134,19 +174,27 @@
             <div class="card-content">
               <p>
                 <span class="section-highlight">Definition</span>
-                Tornadoes are violently rotating columns of air that form at the base of a thunderstorm and extend to the ground. They become visible when condensation funnel forms, consisting of water droplets, dust, and debris.
+                Tornadoes are violently rotating columns of air that form at the
+                base of a thunderstorm and extend to the ground. They become
+                visible when a condensation funnel forms, consisting of water
+                droplets, dust, and debris.
               </p>
               <p>
                 <span class="section-highlight">Formation</span>
-                Atmospheric instability triggers tornado formation when warm, moist air near the ground combines with cooler dry air. Wind shear, including changes in wind speed and direction with height, promotes rotation and tornado development.
+                Atmospheric instability triggers tornado formation when warm,
+                moist air near the ground combines with cooler dry air. Wind
+                shear, including changes in wind speed and direction with
+                height, promotes rotation and tornado development.
               </p>
               <p>
                 <span class="section-highlight">Categories</span>
-                Tornadoes are classified using the Fujita Tornado Damage Scale, ranging from F0 to F5, based on wind speed and resulting damage.
+                Tornadoes are classified using the Fujita Tornado Damage Scale,
+                ranging from F0 to F5, based on wind speed and resulting damage.
               </p>
             </div>
           </div>
 
+          <!-- Safety Guidelines Card for Tornado Preparedness -->
           <div class="info-card">
             <h2 class="card-title">
               <i class="fas fa-shield-alt"></i>
@@ -155,27 +203,35 @@
             <div class="card-content">
               <p>
                 <span class="section-highlight">Before the Storm</span>
-                Prepare an emergency kit with essentials like food, water, and medicines. Know your evacuation routes and identify safe spaces in your house. Secure outdoor items and install storm shutters if possible.
+                Prepare an emergency kit with essentials like food, water, and
+                medicines. Know your evacuation routes and identify safe spaces
+                in your house. Secure outdoor items and install storm shutters
+                if possible.
               </p>
               <p>
                 <span class="section-highlight">During the Storm</span>
-                Stay indoors and away from windows. Move to the lowest, most sturdy room in your house. Follow evacuation orders if issued and stay tuned to radio/alerts for updates.
+                Stay indoors and away from windows. Move to the lowest, most
+                sturdy room in your house. Follow evacuation orders if issued
+                and stay tuned to radio/alerts for updates.
               </p>
               <p>
                 <span class="section-highlight">After the Storm</span>
-                Conserve phone battery for emergencies. Avoid damaged areas and be cautious of fallen power lines or structural damage. Wear appropriate protective clothing during cleanup.
+                Conserve phone battery for emergencies. Avoid damaged areas and
+                be cautious of fallen power lines or structural damage. Wear
+                appropriate protective clothing during cleanup.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <footer style="color: white; margin-top:2rem; text-align: center">
-				<!-- place footer content here -->
-				<p>&copy; Software Engineering 2024-2025</p>
-			</footer>
+      <!-- Footer Section with Copyright Information -->
+      <footer style="color: white; margin-top: 2rem; text-align: center">
+        <p>&copy; Software Engineering 2024-2025</p>
+      </footer>
     </main>
 
+    <!-- JavaScript Libraries for Bootstrap Components -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
   </body>
