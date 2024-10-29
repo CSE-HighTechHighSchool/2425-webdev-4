@@ -1,3 +1,8 @@
+/*
+File: script.js
+Description: This file contains the JavaScript code for the rotating gif on index.html  
+*/
+
 document.addEventListener("DOMContentLoaded", function () {
   const gif = document.getElementById("bgGif");
   const gifs = [
