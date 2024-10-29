@@ -2,6 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+// - Set the default font family and styles.
 * {
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
@@ -28,6 +29,8 @@ html {
 	box-sizing: border-box;
 }
 
+// BG-Image
+// - Set the background image to cover the entire screen.
 .bg-image {
 	position: absolute;
 	top: 0;
@@ -47,6 +50,8 @@ html {
 	background-size: cover;
 }
 
+// BG-Image
+// - Set the background image to cover the entire screen.
 .gif-bg-image {
 	position: absolute;
 	top: 0;
