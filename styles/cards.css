@@ -1,3 +1,4 @@
+/* Grid layout for info cards */
 .info-cards {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -5,10 +6,11 @@
 	margin-top: 2rem;
 }
 
+/* Styling for individual info card */
 .info-card {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px); /* Safari support */
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 20px;
 	padding: 2rem;
@@ -16,11 +18,13 @@
 	cursor: pointer;
 }
 
+/* Hover effect for info card */
 .info-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	transform: translateY(-5px); /* Slight upward movement */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
+/* Title styling for card */
 .card-title {
 	font-size: 1.5rem;
 	font-weight: 600;
@@ -31,16 +35,19 @@
 	gap: 0.5rem;
 }
 
+/* Content styling for card */
 .card-content {
 	font-size: 1rem;
 	line-height: 1.6;
 	color: rgba(255, 255, 255, 0.9);
 }
 
+/* Margin styling for paragraph within info-card */
 .info-card p {
 	margin-bottom: 1rem;
 }
 
+/* Animation for card entry - fade-in from above */
 @keyframes fadeInDown {
 	from {
 		opacity: 0;
@@ -52,6 +59,7 @@
 	}
 }
 
+/* Basic fade-in animation */
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -61,11 +69,13 @@
 	}
 }
 
+/* Applying fade-in animation to info card */
 .info-card {
 	animation: fadeIn 1s ease-out forwards;
-	opacity: 0;
+	opacity: 0; /* Initially hidden */
 }
 
+/* Staggered animation delay for multiple info cards */
 .info-card:nth-child(1) {
 	animation-delay: 0.3s;
 }
@@ -73,6 +83,7 @@
 	animation-delay: 0.6s;
 }
 
+/* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
 	.page-title {
 		font-size: 3rem;
@@ -83,10 +94,11 @@
 	}
 
 	.info-cards {
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr; /* Single-column layout on smaller screens */
 	}
 }
 
+/* Animation for fade-in effect from below */
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -98,11 +110,13 @@
 	}
 }
 
+/* Team card animation from above */
 .team-card {
 	animation: fadeInDown 0.6s ease-out forwards;
 	opacity: 0;
 }
 
+/* Staggered animation delay for multiple team cards */
 .team-card:nth-child(1) {
 	animation-delay: 0.2s;
 }
@@ -113,6 +127,7 @@
 	animation-delay: 0.6s;
 }
 
+/* Responsive styling for team cards on mobile */
 @media (max-width: 768px) {
 	.page-title {
 		font-size: 2.5rem;
@@ -133,11 +148,13 @@
 	}
 }
 
+/* Animation for home card fade-in effect */
 .home-card {
 	animation: fadeInDown 0.6s ease-out forwards;
 	opacity: 0;
 }
 
+/* Styling for team cards */
 .team-card {
 	background: rgba(0, 0, 0, 0.15);
 	border-radius: 20px;
@@ -150,12 +167,14 @@
 	-webkit-backdrop-filter: blur(10px);
 }
 
+/* Hover effect for team cards */
 .team-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-5px); /* Slight upward movement */
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Shadow effect */
+	background: rgba(255, 255, 255, 0.2); /* Background change on hover */
 }
 
+/* Gradient overlay effect on team card */
 .team-card::before {
 	content: "";
 	position: absolute;
@@ -168,11 +187,13 @@
 	transition: opacity 0.3s ease;
 }
 
+/* Fade-in gradient effect on hover */
 .team-card:hover::before {
 	opacity: 1;
 }
 
+/* Animation for reference card fade-in from below */
 .reference-card {
 	animation: fadeInUp 0.6s ease-out forwards;
 	opacity: 0;
-  }
+}
