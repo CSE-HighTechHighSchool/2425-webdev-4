@@ -22,6 +22,7 @@ const firebaseConfig = {
 
 
 // Initialize Firebase authentication
+const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 const db = getDatabase(app);
@@ -29,8 +30,8 @@ const db = getDatabase(app);
 
 document.getElementById('signIn').onclick = function(){
     // Get suer's email and password for sign in 
-    const email = document.getElementById('loginEmail').value;
-    const password = document.getElementById('loginPassword').value;
+    const email = document.getElementById('signUserEmail').value;
+    const password = document.getElementById('signUserPass').value;
 
     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
         const user = userCredential.user;
@@ -78,5 +79,5 @@ function logIn(user) {
         sessionStorage.setItem('user', JSON.stringify(user));
     }
 
-    window.location.href = 'home.html'
+    window.location.href = 'index.html'
 }

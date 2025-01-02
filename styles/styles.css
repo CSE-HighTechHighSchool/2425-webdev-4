@@ -462,6 +462,23 @@ html {
 	margin: 0;
 }
 
+.register-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap primary color */
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker shade for hover effect */
+}
+
+
 /* Individual reference item styling */
 .reference-item {
 	margin-bottom: 1.5rem;

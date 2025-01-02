@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sign In - Natural Disasters</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<!-- Bootstrap and Font Awesome CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="styles/bootstrap.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
+		<link rel="stylesheet" href="styles/cards.css" />
+		<!-- CryptoJS for password encryption -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+			.bg-image {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url(img/hurricane-space-view.webp);
+				background-size: cover;
+				background-position: center;
+				filter: blur(8px);
+				-webkit-filter: blur(8px);
+				z-index: -2;
+			}
+
+			.registration-form {
+				background: rgba(255, 255, 255, 0.9);
+				padding: 2rem;
+				border-radius: 10px;
+				max-width: 500px;
+				margin: 2rem auto;
+			}
+
+			.form-group {
+				margin-bottom: 1rem;
+			}
+
+			.form-control {
+				border-radius: 5px;
+			}
+
+			.btn-register {
+				width: 100%;
+				padding: 0.75rem;
+				background-color: #0d6efd;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			.btn-register:hover {
+				background-color: #0b5ed7;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Background image -->
+		<div class="bg-image"></div>
+
+		<!-- Header with navigation -->
+		<header>
+			<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="index.html">
+						<!-- Logo for navigation home link -->
+						<img
+							src="img/tornado-solid.svg"
+							alt="Tornado Icon"
+							class="icon"
+						/>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarColor01"
+						aria-controls="navbarColor01"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarColor01">
+						<!-- Navigation links for site pages -->
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a
+									class="nav-link hover-underline-animation"
+									href="index.html"
+									>Home
+									<span class="visually-hidden"
+										>(current)</span
+									>
+								</a>
+							</li>
+							<li class="nav-item dropdown">
+								<!-- Dropdown for different natural disasters pages -->
+								<a
+									class="nav-link dropdown-toggle hover-underline-animation"
+									data-bs-toggle="dropdown"
+									href="#"
+									role="button"
+									aria-haspopup="true"
+									aria-expanded="false"
+									>Natural Disasters</a
+								>
+								<div class="dropdown-menu">
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="tornados.html"
+										>Tornados</a
+									>
+									<a
+										class="dropdown-item active hover-underline-animation"
+										href="hurricanes.html"
+										>Hurricanes</a
+									>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="tsunamis.html"
+										>Tsunamis</a
+									>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="wildfires.html"
+										>Wildfires</a
+									>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="landslides.html"
+										>Landslides</a
+									>
+									<div class="dropdown-divider"></div>
+									<a
+										class="dropdown-item hover-underline-animation"
+										href="references.html"
+										>References</a
+									>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link hover-underline-animation"
+									href="authors.html"
+									>Authors</a
+								>
+							</li>
+						</ul>
+                        <button class="btn btn-secondary my-2 my-sm-0 m-2" id ="authButton" type="submit">Search</button>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Main content -->
+		<main>
+			<div class="container">
+				<div class="page-header">
+					<h1 class="page-title" style="color: white">Sign In</h1>
+    				</div>
+
+				<!-- Registration Form -->
+				<div class="registration-form">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="userEmail">Email</label>
+                            <input type="email" class="form-control" id="signUserEmail" placeholder="Enter email" required />
+                            <small class="form-text text-muted">Must be a valid @ctemc.org email address.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="userPass">Password</label>
+                            <input type="password" class="form-control" id="signUserPass" placeholder="Enter password" required />
+                            <small class="form-text text-muted">Password must be at least 6 characters long.</small>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="keepLoggedIn">
+                                <input type="checkbox" id="keepLoggedInSwitch" /> Keep Logged In
+                            </label>
+                            <small class="form-text text-muted">Check to stay logged in.</small>
+                        </div>
+                
+                        <button type="button" id="signIn" class="btn-register">Sign In</button>
+                
+                        <!-- Add a styled div for register text -->
+                        <div class="register-link">
+                            <a href="register.html">Don't have an account? <strong>Register here</strong>.</a>
+                        </div>
+                    </form>
+                </div>
+                
+			</div>
+
+			<!-- Footer -->
+			<footer style="color: white; padding: 10px; border-radius: 5px; text-align: center">
+				<p>&copy; Software Engineering 2024-2025</p>
+			</footer>
+		</main>
+
+		<!-- Required Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+		<!-- Firebase Registration Script -->
+		<script type="module" src="js/signIn.js"></script>
+        <script type="module" src = "js/header.js"></script>
+
+	</body>
+</html>
