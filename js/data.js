@@ -146,6 +146,14 @@ document.getElementById("plotButton").onclick = function () {
                 { x: parseFloat(scores.risk_score).toFixed(2), y: parseFloat(scores.eal_score).toFixed(2), label: "Overall" },
             ];
 
+            // Calculate bounds for zooming
+            const xValues = dataPoints.map(point => parseFloat(point.x));
+            const yValues = dataPoints.map(point => parseFloat(point.y));
+            const xMin = Math.min(...xValues) - 5;
+            const xMax = Math.max(...xValues) + 5;
+            const yMin = Math.min(...yValues) - 5;
+            const yMax = Math.max(...yValues) + 5;
+
             // Update the chart with new data
             chart.data.datasets[0].data = dataPoints;
             chart.data.datasets[0].backgroundColor = [
@@ -171,9 +179,15 @@ document.getElementById("plotButton").onclick = function () {
                 },
             };
 
+            chart.options.scales.x.min = xMin;
+            chart.options.scales.x.max = xMax;
+            chart.options.scales.y.min = yMin;
+            chart.options.scales.y.max = yMax;
+
             chart.update();
 		});
 };
+
 
 
 
