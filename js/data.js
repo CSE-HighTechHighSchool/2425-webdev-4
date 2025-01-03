@@ -156,28 +156,9 @@ document.getElementById("plotButton").onclick = function () {
 
             // Update the chart with new data
             chart.data.datasets[0].data = dataPoints;
-            chart.data.datasets[0].backgroundColor = [
-                "rgba(255, 99, 132, 0.5)", // Earthquake
-                "rgba(54, 162, 235, 0.5)", // Riverine Flooding
-                "rgba(255, 206, 86, 0.5)", // Coastal Flooding
-                "rgba(75, 192, 192, 0.5)", // Hurricane
-                "rgba(153, 102, 255, 0.5)", // Tornado
-                "rgba(255, 159, 64, 0.5)", // Wildfire
-                "rgba(201, 203, 207, 0.5)", // Winter Weather
-                "rgba(255, 205, 86, 0.5)", // Heat Wave
-                "rgba(255, 99, 71, 0.5)", // Drought
-                "rgba(144, 238, 144, 0.5)", // Hail
-                "rgba(135, 206, 250, 0.5)", // Strong Wind
-                "rgba(128, 128, 128, 0.5)", // Overall
-            ];
 
-            chart.options.plugins.tooltip = {
-                callbacks: {
-                    label: function (tooltipItem) {
-                        return `${tooltipItem.raw.label}: (${tooltipItem.raw.x}, ${tooltipItem.raw.y})`;
-                    },
-                },
-            };
+
+
 
             chart.options.scales.x.min = xMin;
             chart.options.scales.x.max = xMax;
@@ -209,6 +190,13 @@ async function initChart() {
 		},
 		options: {
 			plugins: {
+				tooltip: {
+					callbacks: {
+						label: function (tooltipItem) {
+							return `${tooltipItem.raw.label}: (${tooltipItem.raw.x}, ${tooltipItem.raw.y})`;
+						},
+					},
+				},
 				legend: {
 					labels: {
 						color: "black",
@@ -235,6 +223,22 @@ async function initChart() {
 			},
 		},
 	});
+
+
+	chart.data.datasets[0].backgroundColor = [
+		"rgba(255, 99, 132, 0.5)", // Earthquake
+		"rgba(54, 162, 235, 0.5)", // Riverine Flooding
+		"rgba(255, 206, 86, 0.5)", // Coastal Flooding
+		"rgba(75, 192, 192, 0.5)", // Hurricane
+		"rgba(153, 102, 255, 0.5)", // Tornado
+		"rgba(255, 159, 64, 0.5)", // Wildfire
+		"rgba(201, 203, 207, 0.5)", // Winter Weather
+		"rgba(255, 205, 86, 0.5)", // Heat Wave
+		"rgba(255, 99, 71, 0.5)", // Drought
+		"rgba(144, 238, 144, 0.5)", // Hail
+		"rgba(135, 206, 250, 0.5)", // Strong Wind
+		"rgba(128, 128, 128, 0.5)", // Overall
+	];
 }
 
 async function loadChartModule() {
