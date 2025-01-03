@@ -8,6 +8,7 @@ import {
 	ref,
 	update,
 	get,
+	set,
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
 const firebaseConfig = {
@@ -93,6 +94,29 @@ async function getFIPSCode(zipCode) {
 	}
 }
 
+async function deleteZipCode() {
+	if (!user) {
+		alert("Please sign in to delete your location");
+		return;
+	}
+
+	try {
+		await update(ref(db, "users/" + user.uid), {
+			zipCode: null,
+			lastUpdated: new Date().toISOString(),
+		});
+		document.getElementById("zipCode").value = "";
+		alert("Location deleted successfully");
+	} catch (error) {
+		console.error("Error deleting zip code:", error);
+		alert("Error deleting location. Please try again.");
+	}
+}
+
+document.getElementById("deleteButton").onclick = function () {
+	deleteZipCode();
+}
+
 async function uploadZipCode() {
 	const zipCode = document.getElementById("zipCode").value;
 	if (!user) {
@@ -103,7 +127,7 @@ async function uploadZipCode() {
 	console.log(user.uid);
 
 	try {
-		await update(ref(db, "users/" + user.uid), {
+		await set(ref(db, "users/" + user.uid), {
 			zipCode: zipCode,
 			lastUpdated: new Date().toISOString(),
 		});
