@@ -48,6 +48,7 @@ document.getElementById('signIn').onclick = function(){
             // Successfully updated
             get(ref(db, 'users/' + user.uid)).then((snapshot) => {
                 if (snapshot.exists()) {
+                    console.log('Data available:', snapshot.val());
                     logIn(snapshot.val());
                 } else {
                     console.log('No data available');
