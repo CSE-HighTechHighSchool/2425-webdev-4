@@ -389,7 +389,7 @@ html {
 }
 
 /* Background grid overlay styling */
-.bg-grid {
+/* .bg-grid {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -400,7 +400,7 @@ html {
 	linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 	background-size: 50px 50px;
 	opacity: 0.5;
-}
+} */
 
 /* References grid layout */
 .references-grid {
