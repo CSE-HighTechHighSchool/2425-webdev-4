@@ -35,6 +35,8 @@ document.getElementById('signIn').onclick = function(){
 
     signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
         const user = userCredential.user;
+
+        console.log(user);
     
         // Log sign-in in db
         // Update will only add the last_login and won't overwrite anything

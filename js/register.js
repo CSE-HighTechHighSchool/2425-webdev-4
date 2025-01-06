@@ -51,11 +51,9 @@ document.getElementById("submitData").onclick = function () {
           email: userEmail,
           password: encryptPass(password)
         });
-
-        alert("User registered successfully!");
-
-
-			})
+      
+      
+      })
 			.catch((error) => {
 				const errorCode = error.code;
 				const errorMessage = error.message;
