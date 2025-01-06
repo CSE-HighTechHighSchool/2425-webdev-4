@@ -40,7 +40,7 @@ function getUserName() {
 	}
 
 	// Display the user's name
-	console.log(user.uid);
+	console.log(user);
 }
 
 window.onload = async function () {
@@ -127,7 +127,7 @@ async function uploadZipCode() {
 	console.log(user.uid);
 
 	try {
-		await set(ref(db, "users/" + user.uid), {
+		await update(ref(db, "users/" + user.uid), {
 			zipCode: zipCode,
 			lastUpdated: new Date().toISOString(),
 		});
