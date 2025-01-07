@@ -65,6 +65,7 @@ document.getElementById('signIn').onclick = function(){
 
         console.log('skibidi 2')
     }).catch((error) => {
+        alert(error);
         console.error('Sign-in error:', error);
     });
     
