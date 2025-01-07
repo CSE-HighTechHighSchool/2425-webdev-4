@@ -106,6 +106,7 @@ function validation(firstName, lastName, userEmail, password) {
       return false;
   }
 
+  alert("Successfully registered!");
   return true;
 }
 
