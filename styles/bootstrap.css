@@ -2946,7 +2946,7 @@ textarea.form-control-lg {
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
-  --bs-btn-line-height: 1.5;
+  --bs-btn-line-height: 1.6;
   --bs-btn-color: var(--bs-body-color);
   --bs-btn-bg: transparent;
   --bs-btn-border-width: var(--bs-border-width);
@@ -3888,13 +3888,13 @@ textarea.form-control-lg {
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
   --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-padding-y: 0.3125rem;
-  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-brand-padding-y: 0rem;
+  --bs-navbar-brand-margin-end: 0rem;
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-nav-link-padding-x: 0.5rem;
-  --bs-navbar-toggler-padding-y: 0.25rem;
+  --bs-navbar-toggler-padding-y: 0rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2855, 58, 60, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -3907,7 +3907,6 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
 .navbar > .container,
 .navbar > .container-fluid,

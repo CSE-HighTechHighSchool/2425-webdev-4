@@ -43,18 +43,23 @@ function logout() {
 	window.location = "index.html";
 }
 function updateButton() {
-	const authButton = document.getElementById("authButton");
-	if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
-		authButton.innerHTML = "Log Out";
-		authButton.addEventListener("click", logout);
-	} else {
+    const authButton = document.getElementById("authButton");
+    authButton.classList.add("auth-button"); // Add the base class
+
+    if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
+        authButton.innerHTML = "Log Out";
+        authButton.classList.add("log-out");
+        authButton.classList.remove("sign-in");
+        authButton.addEventListener("click", logout);
+    } else {
         authButton.innerHTML = "Sign In";
+        authButton.classList.add("sign-in");
+        authButton.classList.remove("log-out");
         authButton.addEventListener("click", () => {
             window.location = "signIn.html";
         });
     }
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     updateButton();
