@@ -54,6 +54,7 @@ document.getElementById('signIn').onclick = function(){
                     logIn(snapshot.val());
                 } else {
                     console.log('No data available');
+                    alert('No account found. Please check your credentials or register for a new account.');
                 }
             }).catch((error) => {
                 console.error(error);
@@ -66,6 +67,8 @@ document.getElementById('signIn').onclick = function(){
         console.log('skibidi 2')
     }).catch((error) => {
         console.error('Sign-in error:', error);
+        // If there is an error during sign-in, display an alert
+        alert('Sign-in error. Please check your credentials and try again.');
     });
     
 }
