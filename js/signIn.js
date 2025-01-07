@@ -66,6 +66,7 @@ document.getElementById('signIn').onclick = function(){
 
         console.log('skibidi 2')
     }).catch((error) => {
+        alert(error);
         console.error('Sign-in error:', error);
         // If there is an error during sign-in, display an alert
         alert('Sign-in error. Please check your credentials and try again.');

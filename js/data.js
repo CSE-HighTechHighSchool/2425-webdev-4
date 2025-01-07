@@ -227,6 +227,9 @@ async function initChart() {
 					},
 				},
 			},
+			layout: {
+				backgroundColor: "white",
+			},
 			scales: {
 				x: {
 					title: {

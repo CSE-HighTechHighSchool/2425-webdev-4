@@ -1,181 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Set Zip Code - Natural Disasters</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/bootstrap.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <style>
-        body {
-            color: black;
-            background: white;
-        }
-        .split-container {
-            display: flex;
-            min-height: calc(100vh - 100px);
-        }
-        .left-side, .right-side {
-            flex: 1;
-            padding: 4rem;
-        }
-        .zip-form {
-            max-width: 700px;
-            margin: auto;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            /*border-radius: 8px;
-            border: 2px solid #000;
-            padding: 10px; 
-            border-radius: 1px; */
-        }
+    <head>
+        <title>Set Zip Code - Natural Disasters</title>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="styles/bootstrap.css" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <style>
+        /* Modern base styles */
+body {
+    background: url("img/hurricane-space-view.webp") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
 
-        .zip-form .form-control {
-            border: 1px solid #000; /* Add a border to the input field */
-            padding: 5px; /* Add some padding inside the input field */
-            border-radius: 3px; /* Optional: Add rounded corners to the input field */
-          }
-        .zip-input {
-            background: rgba(255, 255, 255, 0.05);
-            border: 5px solid rgba(255, 255, 255, 0.1);
-            color: black;
-        }
-        #chartContainer {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 1rem;
-            height: 400px;
-        }
+/* Navbar modernization */
+.navbar {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-button-2 {
+	padding: 1rem 2.5rem;
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: white;
+	background: linear-gradient(45deg, blue(255, 255, 255, 0.2) 0%, darkblue(255, 255, 255, 0.1) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	display: inline-block;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
+.explore-button-2:hover {
+	transform: translateY(-2px);
+	background: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+main {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(15deg);
+}
+
+/* Modern form styling */
+.zip-form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* Modern button styling */
+.explore-button-2 {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    margin: 0.5rem;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+}
+
+
+.hero-content-2 {
+	text-align: center;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 3rem;
+	border-radius: 20px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+.explore-button-2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+    background: linear-gradient(45deg, #357abd, #2868a5);
+}
+
+/* Chart container modernization */
+#chartContainer {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+/* Hero section enhancement */
+
+
+.hero-content-2 {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+/* Dropdown menu modernization */
+.dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(74, 144, 226, 0.1);
+    transform: translateX(5px);
+}
+
+/* Animation enhancement */
+.hover-underline-animation {
+    position: relative;
+    color: #1a1a1a;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #4a90e2;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
     </style>
-</head>
-<body>
-    <div class="bg-gradient"></div>
-    <div class="bg-grid"></div>
+    </head>
+    <body>
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <!-- Icon for the home page link -->
-                    <img
-                        src="img/tornado-solid.svg"
-                        alt="Tornado Icon"
-                        class="icon"
-                    />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarColor01"
-                    aria-controls="navbarColor01"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <!-- Navigation links -->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link hover-underline-animation"
-                                href="index.html"
-                                >Home
-                                <span class="visually-hidden"
-                                    >(current)</span
-                                >
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <!-- Dropdown for various natural disasters pages -->
-                            <a
-                                class="nav-link dropdown-toggle hover-underline-animation"
-                                data-bs-toggle="dropdown"
-                                href="#"
-                                role="button"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                >Natural Disasters</a
-                            >
-                            <div class="dropdown-menu">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Icon for the home page link -->
+                        <img
+                            src="img/tornado-solid.svg"
+                            alt="Tornado Icon"
+                            class="icon" />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarColor01"
+                        aria-controls="navbarColor01"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <!-- Navigation links -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
                                 <a
-                                    class="dropdown-item hover-underline-animation"
-                                    href="tornados.html"
-                                    >Tornados</a
-                                >
+                                    class="nav-link hover-underline-animation"
+                                    href="index.html">Home
+                                    <span
+                                        class="visually-hidden">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <!-- Dropdown for various natural disasters pages -->
                                 <a
-                                    class="dropdown-item hover-underline-animation"
-                                    href="hurricanes.html"
-                                    >Hurricanes</a
-                                >
+                                    class="nav-link dropdown-toggle hover-underline-animation"
+                                    data-bs-toggle="dropdown"
+                                    href="#"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="false">Natural Disasters</a>
+                                <div class="dropdown-menu">
+                                    <a
+                                        class="dropdown-item hover-underline-animation"
+                                        href="tornados.html">Tornados</a>
+                                    <a
+                                        class="dropdown-item hover-underline-animation"
+                                        href="hurricanes.html">Hurricanes</a>
+                                    <a
+                                        class="dropdown-item hover-underline-animation"
+                                        href="tsunamis.html">Tsunamis</a>
+                                    <a
+                                        class="dropdown-item hover-underline-animation"
+                                        href="wildfires.html">Wildfires</a>
+                                    <a
+                                        class="dropdown-item hover-underline-animation"
+                                        href="landslides.html">Landslides</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a
+                                        class="dropdown-item hover-underline-animation"
+                                        href="references.html">References</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
                                 <a
-                                    class="dropdown-item hover-underline-animation"
-                                    href="tsunamis.html"
-                                    >Tsunamis</a
-                                >
-                                <a
-                                    class="dropdown-item hover-underline-animation"
-                                    href="wildfires.html"
-                                    >Wildfires</a
-                                >
-                                <a
-                                    class="dropdown-item hover-underline-animation"
-                                    href="landslides.html"
-                                    >Landslides</a
-                                >
-                                <div class="dropdown-divider"></div>
-                                <a
-                                    class="dropdown-item hover-underline-animation"
-                                    href="references.html"
-                                    >References</a
-                                >
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a
-                                class="nav-link active hover-underline-animation"
-                                href="authors.html"
-                                >Authors</a
-                            >
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a href="dataViewer.html"><button id="dataViewer" class="btn btn-primary" style="display: none;">Data Viewer</button></a>
-                        </li>
-                    </ul>
+                                    class="nav-link active hover-underline-animation"
+                                    href="authors.html">Authors</a>
+                            </li>
+                            <li class="nav-item ms-2">
+                                <a href="dataViewer.html"><button
+                                        id="dataViewer" class="btn btn-primary"
+                                        style="display: none;">Data
+                                        Viewer</button></a>
+                            </li>
+                        </ul>
 
-                    <button class="btn btn-secondary my-2 my-sm-0 m-2" id ="authButton" type="submit">Search</button>
+                        <button class="btn btn-secondary my-2 my-sm-0 m-2"
+                            id="authButton" type="submit">Search</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            
+            <div class="hero-section">
+                <div class="hero-content-2">
+                    <h1 class="hero-title">Natural Disasters</h1>
+
+                    <div class="mb-2">
+                        <label for="zipCode" class="form-label">Enter Zip
+                            Code</label>
+                        <input type="text" class="form-control zip-input"
+                            id="zipCode" pattern="[0-9]{5}" required>
+                    </div>
+                    <button type="button"
+                        class="btn btn-primary explore-button-2"
+                        id="setButton">Set Zip Code</button>
+                    <button type="button"
+                        class="btn btn-primary explore-button-2"
+                        id="deleteButton">Delete Zip Code</button>
+                    <button type="button"
+                        class="btn btn-primary explore-button-2"
+                        id="plotButton">Plot Zip Code</button>
+
+                    <div id="chartContainer">
+                        <canvas id="riskChart"
+                            style="background-color: white;"></canvas>
+                    </div>
+
                 </div>
             </div>
-        </nav>
-    </header>
 
-    <main>
-        <div class="split-container">
-            <div class="left-side">
-                <div class="zip-form">
-                        <div class="mb-2">
-                            <label for="zipCode" class="form-label">Enter Zip Code</label>
-                            <input type="text" class="form-control zip-input" id="zipCode" pattern="[0-9]{5}" required>
-                        </div>
-                        <button type="button" class="btn btn-primary" id="setButton">Set Zip Code</button>
-                        <button type ="button" class="btn btn-primary" id="deleteButton">Delete Zip Code</button>
-                        <button type ="button" class="btn btn-primary" id="plotButton">Plot Zip Code</button>
-                </div>
-            </div>
-            <div class="right-side">
-                <div id="chartContainer">
-                    <canvas id="riskChart"></canvas>
-                </div>
-            </div>
-        </div>
-    </main>
+        </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-    <script type="module" src="js/data.js"></script>
-    <script type="module" src="js/header.js"></script>
-</body>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+        <script type="module" src="js/data.js"></script>
+        <script type="module" src="js/header.js"></script>
+    </body>
 </html>
