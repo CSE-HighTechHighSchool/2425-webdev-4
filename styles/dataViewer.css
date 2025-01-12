@@ -1,0 +1,122 @@
+/* Modern base styles */
+.dataViewerBody {
+    background: url("../img/hurricane-space-view.webp") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.explore-button-2 {
+	padding: 1rem 2.5rem;
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: white;
+	background: linear-gradient(45deg, blue(255, 255, 255, 0.2) 0%, darkblue(255, 255, 255, 0.1) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	display: inline-block;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
+.explore-button-2:hover {
+	transform: translateY(-2px);
+	background: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.dataViewerTransition {
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(15deg);
+}
+
+/* Modern form styling */
+.zip-form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* Modern button styling */
+.explore-button-2 {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    margin: 0.5rem;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+}
+
+
+.hero-content-2 {
+	text-align: center;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 3rem;
+	border-radius: 20px;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+.explore-button-2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+    background: linear-gradient(45deg, #357abd, #2868a5);
+}
+
+/* Chart container modernization */
+#chartContainer {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+/* Hero section enhancement */
+
+.hero-content-2 {
+    max-width: 800px;
+    margin: 0 auto;
+}

@@ -1,332 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Set Zip Code - Natural Disasters</title>
-        <meta charset="utf-8" />
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet" />
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            rel="stylesheet" />
-        <link rel="stylesheet" href="styles/bootstrap.css" />
-        <link rel="stylesheet" href="styles/styles.css" />
-        <style>
-        /* Modern base styles */
-body {
-    background: url("img/hurricane-space-view.webp") no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
+  <head>
+    <title>Set Zip Code - Natural Disasters</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/cards.css" />
+    <link rel="stylesheet" href="styles/dataViewer.css" />
+  </head>
+  <body class="dataViewerBody">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
 
-
-
-.explore-button-2 {
-	padding: 1rem 2.5rem;
-	font-size: 1.1rem;
-	font-weight: 500;
-	color: white;
-	background: linear-gradient(45deg, blue(255, 255, 255, 0.2) 0%, darkblue(255, 255, 255, 0.1) 100%);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 50px;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	text-decoration: none;
-	display: inline-block;
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-}
-.explore-button-2:hover {
-	transform: translateY(-2px);
-	background: linear-gradient(45deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-main {
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-
-.navbar-brand img {
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover img {
-    transform: rotate(15deg);
-}
-
-/* Modern form styling */
-.zip-form {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 2rem;
-    margin: 2rem auto;
-}
-
-.form-control {
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 0.75rem;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.form-control:focus {
-    border-color: #4a90e2;
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
-}
-
-/* Modern button styling */
-.explore-button-2 {
-    padding: 0.75rem 1.5rem;
-    border-radius: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    border: none;
-    margin: 0.5rem;
-    background: linear-gradient(45deg, #4a90e2, #357abd);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
-}
-
-
-.hero-content-2 {
-	text-align: center;
-	z-index: 2;
-	background: rgba(0, 0, 0, 0.2);
-	padding: 3rem;
-	border-radius: 20px;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-}
-.explore-button-2:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
-    background: linear-gradient(45deg, #357abd, #2868a5);
-}
-
-/* Chart container modernization */
-#chartContainer {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    margin: 2rem 0;
-    padding: 1.5rem;
-}
-
-/* Hero section enhancement */
-
-
-.hero-content-2 {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-
-
-/* Dropdown menu modernization */
-/*.dropdown-menu {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
-}
-
-.dropdown-item {
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    transition: all 0.2s ease;
-}
-
-.dropdown-item:hover {
-    background: rgba(74, 144, 226, 0.1);
-    transform: translateX(5px);
-}
-
-/* Animation enhancement */
-/*.hover-underline-animation {
-    position: relative;
-    color: #1a1a1a;
-}
-
-.hover-underline-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: #4a90e2;
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-} 
-*/
-    </style>
-    </head>
-    <body>
-        <div class="bg-gradient"></div>
-        <div class="bg-grid"></div>
-
-        <header>
-			<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="index.html">
-						<!-- Logo for navigation home link -->
-						<img
-							src="img/tornado-solid.svg"
-							alt="Tornado Icon"
-							class="icon"
-						/>
-					</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarColor01"
-						aria-controls="navbarColor01"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarColor01">
-						<!-- Navigation links for site pages -->
-						<ul class="navbar-nav ms-auto">
-							<li class="nav-item">
-								<a
-									class="nav-link hover-underline-animation"
-									href="index.html"
-									>Home
-									<span class="visually-hidden"
-										>(current)</span
-									>
-								</a>
-							</li>
-							<li class="nav-item dropdown">
-								<!-- Dropdown for different natural disasters pages -->
-								<a
-									class="nav-link dropdown-toggle hover-underline-animation"
-									data-bs-toggle="dropdown"
-									href="#"
-									role="button"
-									aria-haspopup="true"
-									aria-expanded="false"
-									>Natural Disasters</a
-								>
-								<div class="dropdown-menu">
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="tornados.html"
-										>Tornados</a
-									>
-									<a
-										class="dropdown-item active hover-underline-animation"
-										href="hurricanes.html"
-										>Hurricanes</a
-									> <!-- Check this -->
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="tsunamis.html"
-										>Tsunamis</a
-									>
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="wildfires.html"
-										>Wildfires</a
-									>
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="landslides.html"
-										>Landslides</a
-									>
-									<div class="dropdown-divider"></div>
-									<a
-										class="dropdown-item hover-underline-animation"
-										href="references.html"
-										>References</a
-									>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link hover-underline-animation"
-									href="authors.html"
-									>Authors</a
-								>
-							</li>
-							<li class="nav-item ms-2">
-								<a href="dataViewer.html"><button id="dataViewer" class="btn btn-primary" style="display: none;">Data Viewer</button></a>
-							</li>
-						</ul>
-
-						<button class="btn btn-secondary my-2 my-sm-0 m-2" id ="authButton" type="submit">Search</button>
-					</div>
-				</div>
-			</nav>
-		</header>
-
-        <main>
-            
-            <div class="hero-section">
-                <div class="hero-content-2">
-                    <h1 class="hero-title">Natural Disasters</h1>
-
-                    <div class="mb-2">
-                        <label for="zipCode" class="form-label">Enter Zip
-                            Code</label>
-                        <input type="text" class="form-control zip-input"
-                            id="zipCode" pattern="[0-9]{5}" required>
-                    </div>
-                    <button type="button"
-                        class="btn btn-primary explore-button-2"
-                        id="setButton">Set Zip Code</button>
-                    <button type="button"
-                        class="btn btn-primary explore-button-2"
-                        id="deleteButton">Delete Zip Code</button>
-                    <button type="button"
-                        class="btn btn-primary explore-button-2"
-                        id="plotButton">Plot Zip Code</button>
-
-                    <div id="chartContainer">
-                        <canvas id="riskChart"
-                            style="background-color: white;"></canvas>
-                    </div>
-
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <!-- Logo for navigation home link -->
+            <img src="img/tornado-solid.svg" alt="Tornado Icon" class="icon" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <!-- Navigation links for site pages -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="index.html"
+                  >Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <!-- Dropdown for different natural disasters pages -->
+                <a
+                  class="nav-link dropdown-toggle hover-underline-animation"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Natural Disasters</a
+                >
+                <div class="dropdown-menu">
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="tornados.html"
+                    >Tornados</a
+                  >
+                  <a
+                    class="dropdown-item active hover-underline-animation"
+                    href="hurricanes.html"
+                    >Hurricanes</a
+                  >
+                  <!-- Check this -->
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="tsunamis.html"
+                    >Tsunamis</a
+                  >
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="wildfires.html"
+                    >Wildfires</a
+                  >
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="landslides.html"
+                    >Landslides</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item hover-underline-animation"
+                    href="references.html"
+                    >References</a
+                  >
                 </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link hover-underline-animation"
+                  href="authors.html"
+                  >Authors</a
+                >
+              </li>
+              <li class="nav-item ms-2">
+                <a href="dataViewer.html"
+                  ><button
+                    id="dataViewer"
+                    class="btn btn-primary"
+                    style="display: none"
+                  >
+                    Data Viewer
+                  </button></a
+                >
+              </li>
+            </ul>
+
+            <button
+              class="btn btn-secondary my-2 my-sm-0 m-2"
+              id="authButton"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="dataViewerTransition">
+      <div class="hero-section">
+        <div class="hero-content-2">
+          <h1 class="hero-title">Natural Disasters</h1>
+
+          <div class="mb-2">
+            <label for="zipCode" class="form-label">Enter Zip Code</label>
+            <input
+              type="text"
+              class="form-control zip-input"
+              id="zipCode"
+              pattern="[0-9]{5}"
+              required
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary explore-button-2"
+            id="setButton"
+          >
+            Set Zip Code
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary explore-button-2"
+            id="deleteButton"
+          >
+            Delete Zip Code
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary explore-button-2"
+            id="plotButton"
+          >
+            Plot Zip Code
+          </button>
+
+          <div id="chartContainer">
+            <canvas id="riskChart" style="background-color: white"></canvas>
+          </div>
+		  
+
+          <!-- Information cards section -->
+          <div class="info-cards">
+            <!-- Card: Information about Hurricanes -->
+            <div class="info-card">
+              <h2 class="card-title">
+                <i class="fas fa-info-circle"></i>
+                Information
+              </h2>
+              <div class="card-content">
+                <p>
+                  <span class="section-highlight">Expected Annual Loss (EAL)</span>
+                  This values represents the average economic
+                  loss in dollars resulting from natural hazards each year. It
+                  is calculated for each hazard type and quantifies loss for
+                  relevant consequence types: buildings, people, and
+                  agriculture. 
+                </p>
+                <p>
+                  <span class="section-highlight">Relation to Risk Index</span>
+                  As the natural hazards component of the National
+                  Risk Index, an Expected Annual Loss score and rating represent
+                  a community's relative level of expected losses each year when
+                  compared to all other communities at the same level. An
+                  Expected Annual Loss score is positively associated to a
+                  community's risk; thus, a higher Expected Annual Loss score
+                  results in a higher Risk Index score.
+                </p>
+                
+              </div>
             </div>
+          </div>
 
-        </main>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-        <script type="module" src="js/data.js"></script>
-        <script type="module" src="js/header.js"></script>
-    </body>
+        </div>
+          
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/header.js"></script>
+  </body>
 </html>
