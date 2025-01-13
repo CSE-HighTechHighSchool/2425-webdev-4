@@ -188,6 +188,18 @@ document.getElementById("plotButton").onclick = function () {
             chart.options.scales.x.max = xMax;
             chart.options.scales.y.min = yMin;
             chart.options.scales.y.max = yMax;
+			// add chart title
+			chart.options.plugins.title = {
+				display: true,
+				text: `Chart of Risk Scores vs EAL Scores for ${zipCode}`,
+				color: "black",
+				font: {
+					size: 20,
+				},
+			}
+
+			
+
 
             chart.update();
 		});
@@ -206,7 +218,7 @@ async function initChart() {
 		data: {
 			datasets: [
 				{
-					label: "Risk vs EAL Scores",
+					label: "Risk Score vs EAL Score",
 					data: [],
 					backgroundColor: "rgba(54, 162, 235, 0.5)",
 				},
@@ -214,6 +226,14 @@ async function initChart() {
 		},
 		options: {
 			plugins: {
+				title: {
+					display: true,
+					text: "Chart of Risk Scores vs EAL Scores",
+					color: "black",
+					font: {
+						size: 20,
+					},
+				},
 				tooltip: {
 					callbacks: {
 						label: function (tooltipItem) {
@@ -249,7 +269,10 @@ async function initChart() {
 				},
 			},
 		},
-	});
+	},
+
+
+);
 
 
 	chart.data.datasets[0].backgroundColor = [
