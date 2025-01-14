@@ -14,7 +14,7 @@ import {
 
 import {getDatabase, ref, set, update, child, get} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
-// Your web app's Firebase configuration
+// Web App Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDap12j88caG7TkEaPKESTE-oFCGuUh3q8",
     authDomain: "se-website-project.firebaseapp.com",
@@ -32,6 +32,7 @@ const db = getDatabase();
 
 // ---------------- Register New User --------------------------------//
 
+// Set the click event for the submit button
 document.getElementById("submitData").onclick = function () {
 	const firstName = document.getElementById("firstName").value;
 	const lastName = document.getElementById("lastName").value;
@@ -39,17 +40,19 @@ document.getElementById("submitData").onclick = function () {
 
 	const password = document.getElementById("userPass").value;
 
+  // Validate the input data
 	if (validation(firstName, lastName, userEmail, password)) {
 		createUserWithEmailAndPassword(auth, userEmail, password)
 			.then((userCredential) => {
 				// Signed up
 				const user = userCredential.user;
+        // Save user information to the database
         set(ref(db, 'users/' + user.uid + '/accountInfo'), {
           uid: user.uid,
           firstName: firstName,
           lastName: lastName,
           email: userEmail,
-          password: encryptPass(password)
+          password: encryptPass(password) // Encrypt password
         });
       
       
@@ -57,7 +60,7 @@ document.getElementById("submitData").onclick = function () {
 			.catch((error) => {
 				const errorCode = error.code;
 				const errorMessage = error.message;
-				// ..
+				// Display Error Message
 
         alert(errorMessage);
 			});
@@ -76,6 +79,7 @@ function validation(firstName, lastName, userEmail, password) {
   let lnameRegex = /^[a-zA-Z]+$/;
   let emailRegex = /^[a-zA-Z0-9]+@ctemc\.org$/;
 
+  // Check if any field is empty or contains only spaces
   if (
       isEmptyorSpaces(firstName) ||
       isEmptyorSpaces(lastName) ||
@@ -85,7 +89,7 @@ function validation(firstName, lastName, userEmail, password) {
       alert("Please complete all fields.");
       return false;
   }
-
+  // Check if the first name, last name, and email are valid
   if (!firstName.match(fnameRegex)) {
       alert("First name must contain only letters.");
       return false;

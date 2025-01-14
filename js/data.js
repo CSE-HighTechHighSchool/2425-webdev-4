@@ -1,3 +1,4 @@
+// Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import {
 	getAuth,
@@ -11,6 +12,7 @@ import {
 	set,
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
+// Firebase configuration
 const firebaseConfig = {
 	apiKey: "AIzaSyDap12j88caG7TkEaPKESTE-oFCGuUh3q8",
 	authDomain: "se-website-project.firebaseapp.com",
@@ -21,6 +23,7 @@ const firebaseConfig = {
 	appId: "1:428779366020:web:c4db5c86f69e8725fac4d1",
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getDatabase(app);
@@ -28,6 +31,7 @@ const db = getDatabase(app);
 // Check authentication state
 let user = null;
 
+// Function to get the user's name
 function getUserName() {
 	// Grab value for the 'keep logged in' switch
 	let keepLoggedIn = localStorage.getItem("keepLoggedIn");
@@ -43,12 +47,14 @@ function getUserName() {
 	console.log(user);
 }
 
+// On window load, get user name and load zip code
 window.onload = async function () {
 	getUserName();
 	await loadZipCode(user.uid);
 
 	await initChart();
 };
+
 
 // Load existing zip code
 async function loadZipCode(userId) {
@@ -62,6 +68,7 @@ async function loadZipCode(userId) {
 	}
 }
 
+// Function to get risk scores based on FIPS code
 async function getRiskScores(fipsCode) {
 	try {
 		const snapshot = await get(ref(db, "risk_scores/" + fipsCode));
@@ -78,6 +85,7 @@ async function getRiskScores(fipsCode) {
 	}
 }
 
+// Function to get FIPS code based on zip code
 async function getFIPSCode(zipCode) {
 	try {
 		const snapshot = await get(ref(db, "postal_codes/" + zipCode));
@@ -94,6 +102,7 @@ async function getFIPSCode(zipCode) {
 	}
 }
 
+// Function to delete zip code
 async function deleteZipCode() {
 	if (!user) {
 		alert("Please sign in to delete your location");
@@ -113,10 +122,12 @@ async function deleteZipCode() {
 	}
 }
 
+// Set delete button click event
 document.getElementById("deleteButton").onclick = function () {
 	deleteZipCode();
 }
 
+// Function to upload zip code
 async function uploadZipCode() {
 	const zipCode = document.getElementById("zipCode").value;
 	if (!user) {
@@ -138,10 +149,12 @@ async function uploadZipCode() {
 	}
 }
 
+// Set set button click event
 document.getElementById("setButton").onclick = function () {
 	uploadZipCode();
 };
 
+// Set plot button click event
 document.getElementById("plotButton").onclick = function () {
 	let zipCode = document.getElementById("zipCode").value;
 	let fipsCode = null;
@@ -207,7 +220,7 @@ document.getElementById("plotButton").onclick = function () {
 
 
 
-
+// Chart object
 let chart;
 
 async function initChart() {
@@ -274,7 +287,7 @@ async function initChart() {
 
 );
 
-
+	// Set background colors for each risk type
 	chart.data.datasets[0].backgroundColor = [
 		"rgba(255, 99, 132, 0.5)", // Earthquake
 		"rgba(54, 162, 235, 0.5)", // Riverine Flooding
@@ -291,6 +304,7 @@ async function initChart() {
 	];
 }
 
+// Function to load Chart.js module
 async function loadChartModule() {
 	return new Promise((resolve) => {
 		const script = document.createElement("script");

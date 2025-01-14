@@ -41,6 +41,7 @@ document.getElementById('signIn').onclick = function(){
         // Log sign-in in db
         // Update will only add the last_login and won't overwrite anything
         let logDate = new Date().toISOString();
+        // Console message for debugging
         console.log('skibidi')
     
         update(ref(db, 'users/' + user.uid), {
@@ -63,7 +64,7 @@ document.getElementById('signIn').onclick = function(){
         .catch((error) => {
             console.error('Error updating data:', error);
         });
-
+        // Console message for debugging
         console.log('skibidi 2')
     }).catch((error) => {
         alert(error);

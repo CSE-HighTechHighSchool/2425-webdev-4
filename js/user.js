@@ -140,6 +140,7 @@ function getData(userID, year, month, day) {
 // Must be an async function because you need to get all the data from FRD
 // before you can process it for a table or graph
 
+// Add a row to the table
 function addItemToTable(day, temp, tbody) {
 	let tableRow = document.createElement("tr");
 	let td1 = document.createElement("td");

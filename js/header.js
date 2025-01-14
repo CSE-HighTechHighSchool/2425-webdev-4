@@ -1,3 +1,4 @@
+// Import Firebase modules
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -10,7 +11,7 @@ import {
 
 import {getDatabase, ref, set, update, child, get} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
-// Your web app's Firebase configuration
+// Web App Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDap12j88caG7TkEaPKESTE-oFCGuUh3q8",
     authDomain: "se-website-project.firebaseapp.com",
@@ -26,7 +27,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getDatabase();
 
-
+// Function to log out the user
 function logout() {
 	sessionStorage.removeItem("user"); // Clear session storage
 	localStorage.removeItem("user"); // Clear local storage
@@ -42,6 +43,8 @@ function logout() {
 
 	window.location = "index.html";
 }
+
+// Function to update the authentication button
 function updateButton() {
     const authButton = document.getElementById("authButton");
     authButton.classList.add("auth-button"); // Add the base class
@@ -56,7 +59,7 @@ function updateButton() {
         authButton.classList.add("sign-in");
         authButton.classList.remove("log-out");
         authButton.addEventListener("click", () => {
-            window.location = "signIn.html";
+            window.location = "signIn.html"; // Redirect to sign-in page
         });
     }
 }
@@ -64,6 +67,3 @@ function updateButton() {
 document.addEventListener("DOMContentLoaded", () => {
     updateButton();
 });
-
-
-// ---------------------- Log Out User ---------------------------------------//
