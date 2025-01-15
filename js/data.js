@@ -281,6 +281,8 @@ async function initChart() {
 					max: 100,
 				},
 			},
+			responsiveness: true,
+			maintainAspectRatio: false,
 		},
 	},
 
